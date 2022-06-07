@@ -10,7 +10,7 @@ baseurl:
 footer_url: "https://www.uzairakbar.com"
 footer_text: "Uzair Akbar"
 
-profile-picture: assets/profile.jpg
+profile-picture: assets/profile.png
 favicon_location:
 
 permalink: /:categories/:year-:month-:day-:title/
