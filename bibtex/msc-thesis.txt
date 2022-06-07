@@ -1,0 +1,8 @@
+BibTeX
+@mscthesis{uzair2021,
+author = {Uzair Akbar},
+title = {On Constructing Instrumental Variables with Data Augmentation},
+year = {2021},
+month = {June},
+school = {Technical University of Munich}
+}

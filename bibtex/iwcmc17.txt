@@ -1,0 +1,6 @@
+@article{iwcmc2017,
+  title={Performance Analysis of Decoupled Cell Association in Multi-Tier Hybrid Networks using Real Blockage Environments},
+  author={O. W. Bhatti, H. Suhail, U. Akbar, S. A. Hassan, H. Pervaiz, L. Musavian and Q. Ni},
+  journal={International Wireless Communications and Mobile Computing Conference (IWCMC)},
+  year={2017}
+}

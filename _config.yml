@@ -1,0 +1,33 @@
+title: Uzair Akbar
+author: Uzair Akbar
+subtitle: A place to dump my study notes.
+
+google_analytics: UA-227265779-1
+
+url:
+baseurl:
+
+footer_url: "https://www.uzairakbar.com"
+footer_text: "Uzair Akbar"
+
+profile-picture: assets/profile.jpg
+favicon_location:
+
+permalink: /:categories/:year-:month-:day-:title/
+sass:
+    style: compressed
+    sass_dir: css
+
+navbar:
+ - name: "cv"
+   link: "/uzair_cv.pdf"
+ - name: "blog"
+   link: "/blog"
+ - name: "github"
+   link: "https://github.com/uzairakbar"
+ - name: "google scholar"
+   link: "https://scholar.google.de/citations?user=HQgbKUgAAAAJ&hl=en"
+
+markdown: kramdown
+kramdown:
+  math_engine: katex

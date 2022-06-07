@@ -1,0 +1,43 @@
+---
+layout: default
+---
+
+<img class="profile-picture" src="{{site.baseurl}}/{{site.profile-picture}}">
+
+I dump my study note here because I have a habit of losing physical copies.
+
+### Thesis
+1. [**On Constructing Instrumental Variables with Data Augmentation**  ]()
+*M.Sc. Thesis, Department of Electrical and Computer Engineering, Technical University of Munich, June 2021*   
+\[[bibtex](bibtex/msc-thesis.txt)\]
+\[[pdf](/papers/thesis.pdf)\]
+
+
+### Publications
+
+1.  [**Adversarial Appearance Learning in Augmented Cityscapes for Pedestrian Recognition in Autonomous Driving**](https://ieeexplore.ieee.org/abstract/document/9197024)  
+A. Savkin, T. Lapotre, K. Strauss, **U. Akbar**, F. Tombari
+*IEEE International Conference on Robotics and Automation (ICRA)*, 2020*  
+\[[bibtex](bibtex/icra20.txt)\]
+\[[pdf](/papers/ICRA20.pdf)\]
+
+2.  [**Performance Analysis of Decoupled Cell Association in Multi-Tier Hybrid Networks using Real Blockage Environments**](https://ieeexplore.ieee.org/abstract/document/7986263)  
+O. W. Bhatti, H. Suhail, **U. Akbar**, S. A. Hassan, H. Pervaiz, L. Musavian, Q. Ni
+*IEEE International Wireless Communications and Mobile Computing Conference (IWCMC)*, June 2017  
+\[[bibtex](bibtex/iwcmc17.txt)\]
+\[[pdf](/papers/IWCMC17.pdf)\]
+
+
+<!-- ### Talks
+
+1. Invited talk: Toward intuitive human controlled MAVs: motion primitives based teleoperation  
+*IROS 2018 workshop: Vision based Drones: What's Next?* -->
+
+### Other projects
+
+1. LIDAR based obstacle avoidance using reinforcment learning
+\[[code](https://github.com/uzairakbar/rl-obstacle-avoidance)\]
+[<a class="gif-link" id="rl-obstacle-avoidance-sim">sim</a>/<a class="gif-link" id="rl-obstacle-avoidance-real">real</a> gifs]
+<img class="gif" id="rl-obstacle-avoidance-sim-gif" src="assets/gifs/rl-obstacle-avoidance-sim.gif"/>
+<img class="gif" id="rl-obstacle-avoidance-real-gif" src="assets/gifs/rl-obstacle-avoidance-real.gif"/>
+

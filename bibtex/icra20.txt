@@ -1,0 +1,7 @@
+
+@inproceedings{icra2020,
+author       = {A. Savkin and T. Lapotre and K. Strauss and U. Akbar and F. Tombari},
+title        = {Adversarial Appearance Learning in Augmented Cityscapes for Pedestrian Recognition in Autonomous Driving},
+booktitle    = {IEEE International Conference on Robotics and Automation (ICRA)},
+year         = {2020}
+}
