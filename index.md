@@ -4,7 +4,7 @@ layout: default
 
 <img class="profile-picture" src="{{site.baseurl}}/{{site.profile-picture}}">
 
-I dump my study note here because I have a habit of losing physical copies.
+I dump my study notes here because I have a habit of losing physical copies.
 
 ### Thesis
 1. [**On Constructing Instrumental Variables with Data Augmentation**  ]()
