@@ -3,7 +3,7 @@ layout: post
 category: blog
 title: The one sick child
 snippet: A thought experiment in anti-natalism.
-tags: [armchair philosophy]
+tags: [philosophy]
 ---
 
 It would have been unimaginable in the past that people would already be able to tell the gender of their children while still being in pregnancy. In a similar sense let us imagine for a moment a future where your family physician would be able to analyze your complete genetic makup and tell you with absolute certainty whether the child(ren) you are about to conceive (before the egg has even been fertilized) would suffer from some terrible affliction or not (e.g. Hallopeau–Siemens syndrome). In this fictional world of ours, the doctor can also tell you the number of children you will conceive (twins, triplets, etc.).
