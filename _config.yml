@@ -21,8 +21,8 @@ sass:
 navbar:
  - name: "cv"
    link: "/uzair_cv.pdf"
- - name: "blog"
-   link: "/blog"
+ - name: "notes"
+   link: "/notes"
  - name: "github"
    link: "https://github.com/uzairakbar"
  - name: "google scholar"
