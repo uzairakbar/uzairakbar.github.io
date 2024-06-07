@@ -1,6 +1,6 @@
 ---
 layout: post
-category: blog
+category: notes
 title: The one sick child
 snippet: A thought experiment in anti-natalism.
 tags: [philosophy]
