@@ -12,6 +12,7 @@ footer_text: "Uzair Akbar"
 
 profile-picture: assets/profile.png
 favicon_location: assets/icons/favicon/favicon120.png
+social_icons: assets/icons/socials
 
 permalink: /:categories/:year-:month-:day-:title/
 sass:
