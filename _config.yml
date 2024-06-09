@@ -23,10 +23,6 @@ navbar:
    link: "/uzair_cv.pdf"
  - name: "notes"
    link: "/notes"
- - name: "github"
-   link: "https://github.com/uzairakbar"
- - name: "google scholar"
-   link: "https://scholar.google.de/citations?user=HQgbKUgAAAAJ&hl=en"
 
 markdown: kramdown
 kramdown:
