@@ -206,6 +206,10 @@ pre {
     padding: 5px 0px 0px 0px;
     margin-top: 10px;
 }
+#copyright {
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
 
 // index
 
@@ -622,6 +626,23 @@ height : 100%;
 		float: none;
 	}
 	#navlist li.navbar-list {
+		margin: 0;
+	}
+    #socials {
+		padding: 0px 0 10px 0;
+		margin: 0;
+		display: block;
+		float: none;
+		text-align: center;
+		width: 100%;
+	}
+	#socials li.alignable {
+		display: inline-block;
+	}
+	#socials li.pull-left {
+		float: none;
+	}
+	#socials li.navbar-list {
 		margin: 0;
 	}
 }
