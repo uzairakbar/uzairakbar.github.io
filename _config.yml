@@ -12,6 +12,7 @@ footer_text: "Uzair Akbar"
 
 profile-picture: assets/profile.png
 favicon_location: assets/icons/favicon/favicon120.png
+social_icons: assets/icons/socials
 
 permalink: /:categories/:year-:month-:day-:title/
 sass:
@@ -23,10 +24,6 @@ navbar:
    link: "/uzair_cv.pdf"
  - name: "notes"
    link: "/notes"
- - name: "github"
-   link: "https://github.com/uzairakbar"
- - name: "google scholar"
-   link: "https://scholar.google.de/citations?user=HQgbKUgAAAAJ&hl=en"
 
 markdown: kramdown
 kramdown:
