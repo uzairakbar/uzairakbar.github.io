@@ -17,7 +17,7 @@ I dump my study notes here because I have a habit of losing physical copies.
 
 1.  [**Adversarial Appearance Learning in Augmented Cityscapes for Pedestrian Recognition in Autonomous Driving**](https://ieeexplore.ieee.org/abstract/document/9197024)  
 A. Savkin, T. Lapotre, K. Strauss, **U. Akbar**, F. Tombari
-*IEEE International Conference on Robotics and Automation (ICRA)*, 2020*  
+*IEEE International Conference on Robotics and Automation (ICRA)*, 2020  
 \[[bibtex](bibtex/icra20.txt)\]
 \[[pdf](/papers/ICRA20.pdf)\]
 
