@@ -20,6 +20,8 @@ sass:
     sass_dir: css
 
 navbar:
+ - name: "home"
+   link: "/"
  - name: "cv"
    link: "/uzair_cv.pdf"
  - name: "notes"
