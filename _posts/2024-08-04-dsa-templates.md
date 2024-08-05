@@ -5,7 +5,9 @@ title: Baisc data structures & algorithms in python
 snippet: Pyhton snippets for popular data structures and algorithms.
 tags: [data structures, algorithms, leetcode]
 ---
-
+- TOC
+{:toc .toc}
+---
 ## Data Structures
 
 ### Linked List
