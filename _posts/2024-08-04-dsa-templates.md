@@ -1,7 +1,7 @@
 ---
 layout: post
 category: notes
-title: Data Structure & Algorithm Python Templates
+title: Baisc data structures & algorithms in python
 snippet: Pyhton snippets for popular data structures and algorithms.
 tags: [data structures, algorithms, leetcode]
 ---
