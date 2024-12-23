@@ -5,6 +5,7 @@ category: notes
 title: Introduction to reinforcement learning
 snippet: Approximate dynamic programming and reinforcement learning basics.
 tags: [data science]
+published: false
 ---
 - TOC
 {:toc .toc}
