@@ -5,6 +5,7 @@ category: notes
 title: Introduction to manifold optimization
 snippet: An introduction to manifold optimization.
 tags: [data science]
+published: false
 ---
 - TOC
 {:toc .toc}

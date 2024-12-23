@@ -5,6 +5,7 @@ category: notes
 title: Introduction to causal inference
 snippet: An introduction to causality and do-calculus.
 tags: [data science]
+published: false
 ---
 - TOC
 {:toc .toc}

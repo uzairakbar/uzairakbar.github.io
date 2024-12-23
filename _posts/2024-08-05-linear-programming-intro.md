@@ -5,6 +5,7 @@ category: notes
 title: Introduction to linear programming
 snippet: An introduction to linear programs and intiger linear programs.
 tags: [data science]
+published: false
 ---
 - TOC
 {:toc .toc}

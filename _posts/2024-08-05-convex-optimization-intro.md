@@ -5,6 +5,7 @@ category: notes
 title: Introduction to convex optimization
 snippet: An introduction to convex optimization.
 tags: [data science]
+published: false
 ---
 - TOC
 {:toc .toc}

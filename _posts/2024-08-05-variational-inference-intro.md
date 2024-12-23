@@ -5,6 +5,7 @@ category: notes
 title: Introduction to variational inference
 snippet: An introduction to variational inference.
 tags: [data science]
+published: false
 ---
 - TOC
 {:toc .toc}
