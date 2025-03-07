@@ -1,0 +1,146 @@
+/* Dark Mode CSS Variables */
+:root {
+    --text-color: #272727;
+    --background-color: #ffffff;
+    --accent-color: #0eb077;
+    --accent-light: rgba(14, 176, 119, 0.3);
+    --inline-code-text: #0a8f64;
+    --inline-code-border: #CFE3DD;
+    --inline-code-bg: #e9f2ef;
+    --code-block-text: #0a8f64;
+    --code-block-border: #CFE3DD;
+    --code-block-bg: #e9f2ef;
+    --link-color: #0eb077;
+    --link-hover-color: rgba(14, 176, 119, 0.3);
+    --border-color: rgba(0, 0, 0, 0.1);
+    --blockquote-bg: rgba(0, 0, 0, 0.05);
+    --table-border: #cccccc;
+    --table-alt-bg: #f8f8f8;
+    --box-shadow-color: rgba(0, 0, 0, 0.2);
+  }
+  
+  [data-theme="dark"] {
+    --text-color: #e0e0e0;
+    --background-color: #1a1a1a;
+    --accent-color: #2ecc71;
+    --accent-light: rgba(46, 204, 113, 0.3);
+    --inline-code-text: #2ecc71;
+    --inline-code-border: #2a5a46;
+    --inline-code-bg: #1e3d30;
+    --code-block-text: #2ecc71;
+    --code-block-border: #2a5a46;
+    --code-block-bg: #1e3d30;
+    --link-color: #2ecc71;
+    --link-hover-color: rgba(46, 204, 113, 0.3);
+    --border-color: rgba(255, 255, 255, 0.1);
+    --blockquote-bg: rgba(255, 255, 255, 0.05);
+    --table-border: #444444;
+    --table-alt-bg: #2a2a2a;
+    --box-shadow-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Apply the CSS variables */
+  body {
+    color: var(--text-color);
+    background-color: var(--background-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  a {
+    color: var(--link-color);
+  }
+  
+  a:hover {
+    color: var(--link-hover-color);
+  }
+  
+  hr {
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+  }
+  
+  code {
+    background-color: var(--inline-code-bg);
+    color: var(--inline-code-text);
+    border: 1px solid var(--inline-code-border);
+  }
+  
+  pre code {
+    background-color: var(--code-block-bg);
+    color: var(--code-block-text);
+  }
+  
+  pre {
+    background: var(--code-block-bg);
+    border: 1px solid var(--code-block-border);
+  }
+  
+  .filename {
+    background-color: var(--code-block-border);
+    color: var(--code-block-text);
+  }
+  
+  #site-title, #site-subtitle {
+    color: var(--text-color);
+  }
+  
+  blockquote {
+    background-color: var(--blockquote-bg);
+  }
+  
+  table tr {
+    background-color: var(--background-color);
+  }
+  
+  table tr:nth-child(2n) {
+    background-color: var(--table-alt-bg);
+  }
+  
+  table tr th, table tr td {
+    border: 1px solid var(--table-border);
+  }
+  
+  /* Theme toggle button styles */
+  .theme-toggle {
+    background: var(--accent-color);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 42px;
+    height: 42px;
+    cursor: pointer;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px var(--box-shadow-color);
+    transition: background-color 0.3s ease;
+  }
+  
+  .theme-toggle:hover {
+    background: var(--accent-light);
+  }
+  
+  .theme-toggle i {
+    font-size: 20px;
+  }
+  
+  /* Add icons for sun and moon using Unicode characters */
+  .theme-toggle .sun {
+    display: none;
+  }
+  
+  .theme-toggle .moon {
+    display: inline;
+  }
+  
+  [data-theme="dark"] .theme-toggle .sun {
+    display: inline;
+  }
+  
+  [data-theme="dark"] .theme-toggle .moon {
+    display: none;
+  }
