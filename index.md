@@ -17,7 +17,7 @@ I dump my study notes here because I have a habit of losing physical copies.
 
 1.  [**An Analysis of Causal Effect Estimation using Outcome Invariant Data Augmentation**](https://neurips.cc/virtual/2025/poster/119327)  
 **U. Akbar**, N. Kilbertus, H. Shen, K. Muandet, B. Dai,
-*Advances in Neural Information Processing Systems (NeurIPS)*, 2025 **(Spotlight, top ~3%)**
+*Advances in Neural Information Processing Systems (NeurIPS)*, 2025 **(Spotlight, top ~3%)**  
 \[[bibtex](bibtex/neurips25.txt)\]
 \[[pdf](https://neurips.cc/virtual/2025/poster/119327)\]
 
