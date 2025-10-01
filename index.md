@@ -7,7 +7,7 @@ layout: default
 I dump my study notes here because I have a habit of losing physical copies.
 
 ### Thesis
-1. [**On Constructing Instrumental Variables with Data Augmentation**  ]()
+1. [**On Constructing Instrumental Variables with Data Augmentation**]()
 *M.Sc. Thesis, Department of Electrical and Computer Engineering, Technical University of Munich, June 2021*   
 \[[bibtex](bibtex/msc-thesis.txt)\]
 \[[pdf](/papers/thesis.pdf)\]
@@ -16,17 +16,19 @@ I dump my study notes here because I have a habit of losing physical copies.
 ### Publications
 
 1.  [**An Analysis of Causal Effect Estimation using Outcome Invariant Data Augmentation**](https://neurips.cc/virtual/2025/poster/119327)  
-**U. Akbar**, N. Kilbertus, H. Shen, K. Muandet, B. Dai
-*Advances in Neural Information Processing Systems (NeurIPS)*, 2025  
+**U. Akbar**, N. Kilbertus, H. Shen, K. Muandet, B. Dai,
+*Advances in Neural Information Processing Systems (NeurIPS)*, 2025 **(Spotlight, top ~3%)**
+\[[bibtex](bibtex/neurips25.txt)\]
+\[[pdf](https://neurips.cc/virtual/2025/poster/119327)\]
 
-2.  [**Adversarial Appearance Learning in Augmented Cityscapes for Pedestrian Recognition in Autonomous Driving**](https://ieeexplore.ieee.org/abstract/document/9197024)  
-A. Savkin, T. Lapotre, K. Strauss, **U. Akbar**, F. Tombari
+3.  [**Adversarial Appearance Learning in Augmented Cityscapes for Pedestrian Recognition in Autonomous Driving**](https://ieeexplore.ieee.org/abstract/document/9197024)  
+A. Savkin, T. Lapotre, K. Strauss, **U. Akbar**, F. Tombari,
 *IEEE International Conference on Robotics and Automation (ICRA)*, 2020  
 \[[bibtex](bibtex/icra20.txt)\]
 \[[pdf](/papers/ICRA20.pdf)\]
 
-3.  [**Performance Analysis of Decoupled Cell Association in Multi-Tier Hybrid Networks using Real Blockage Environments**](https://ieeexplore.ieee.org/abstract/document/7986263)  
-O. W. Bhatti, H. Suhail, **U. Akbar**, S. A. Hassan, H. Pervaiz, L. Musavian, Q. Ni
+4.  [**Performance Analysis of Decoupled Cell Association in Multi-Tier Hybrid Networks using Real Blockage Environments**](https://ieeexplore.ieee.org/abstract/document/7986263)  
+O. W. Bhatti, H. Suhail, **U. Akbar**, S. A. Hassan, H. Pervaiz, L. Musavian, Q. Ni,
 *IEEE International Wireless Communications and Mobile Computing Conference (IWCMC)*, June 2017  
 \[[bibtex](bibtex/iwcmc17.txt)\]
 \[[pdf](/papers/IWCMC17.pdf)\]
