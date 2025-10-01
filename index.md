@@ -15,13 +15,17 @@ I dump my study notes here because I have a habit of losing physical copies.
 
 ### Publications
 
-1.  [**Adversarial Appearance Learning in Augmented Cityscapes for Pedestrian Recognition in Autonomous Driving**](https://ieeexplore.ieee.org/abstract/document/9197024)  
+1.  [**An Analysis of Causal Effect Estimation using Outcome Invariant Data Augmentation**](https://neurips.cc/virtual/2025/poster/119327)  
+**U. Akbar**, N. Kilbertus, H. Shen, K. Muandet, B. Dai
+*Advances in Neural Information Processing Systems (NeurIPS)*, 2025  
+
+2.  [**Adversarial Appearance Learning in Augmented Cityscapes for Pedestrian Recognition in Autonomous Driving**](https://ieeexplore.ieee.org/abstract/document/9197024)  
 A. Savkin, T. Lapotre, K. Strauss, **U. Akbar**, F. Tombari
 *IEEE International Conference on Robotics and Automation (ICRA)*, 2020  
 \[[bibtex](bibtex/icra20.txt)\]
 \[[pdf](/papers/ICRA20.pdf)\]
 
-2.  [**Performance Analysis of Decoupled Cell Association in Multi-Tier Hybrid Networks using Real Blockage Environments**](https://ieeexplore.ieee.org/abstract/document/7986263)  
+3.  [**Performance Analysis of Decoupled Cell Association in Multi-Tier Hybrid Networks using Real Blockage Environments**](https://ieeexplore.ieee.org/abstract/document/7986263)  
 O. W. Bhatti, H. Suhail, **U. Akbar**, S. A. Hassan, H. Pervaiz, L. Musavian, Q. Ni
 *IEEE International Wireless Communications and Mobile Computing Conference (IWCMC)*, June 2017  
 \[[bibtex](bibtex/iwcmc17.txt)\]
