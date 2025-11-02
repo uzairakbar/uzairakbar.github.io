@@ -6,13 +6,6 @@ layout: default
 
 I dump my study notes here because I have a habit of losing physical copies.
 
-### Thesis
-1. [**On Constructing Instrumental Variables with Data Augmentation**]()
-*M.Sc. Thesis, Department of Electrical and Computer Engineering, Technical University of Munich, June 2021*   
-\[[bibtex](bibtex/msc-thesis.txt)\]
-\[[pdf](/papers/thesis.pdf)\]
-
-
 ### Publications
 
 1.  [**An Analysis of Causal Effect Estimation using Outcome Invariant Data Augmentation**](https://neurips.cc/virtual/2025/poster/119327)  
