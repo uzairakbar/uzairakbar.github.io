@@ -1,0 +1,4226 @@
+Directory structure:
+└── uzairakbar.github.io/
+    ├── README.md
+    ├── 404.html
+    ├── ANAME
+    ├── CNAME
+    ├── Gemfile
+    ├── LICENSE
+    ├── _config.yml
+    ├── index.md
+    ├── notes.html
+    ├── papers.md
+    ├── tags.html
+    ├── _includes/
+    │   ├── footer.html
+    │   ├── ga.html
+    │   ├── head.html
+    │   ├── image.html
+    │   ├── lightbox.html
+    │   ├── mini-gallery.html
+    │   ├── navbar.html
+    │   └── postbox-nosnippet.html
+    ├── _layouts/
+    │   ├── default.html
+    │   ├── post.html
+    │   └── robot.html
+    ├── _posts/
+    │   ├── 2023-08-04-sick-child.md
+    │   ├── 2024-08-04-dsa-templates.md
+    │   ├── 2024-08-05-airflow-intro.md
+    │   ├── 2024-08-05-antinatalism-intro.md
+    │   ├── 2024-08-05-causal-inference-intro.md
+    │   ├── 2024-08-05-convex-optimization-intro.md
+    │   ├── 2024-08-05-docker-compose-intro.md
+    │   ├── 2024-08-05-dsa-cheatsheet.md
+    │   ├── 2024-08-05-dsa-templates-cpp.md
+    │   ├── 2024-08-05-kubernetes-intro.md
+    │   ├── 2024-08-05-linear-programming-intro.md
+    │   ├── 2024-08-05-manifold-optimization-intro.md
+    │   ├── 2024-08-05-messag-queue-intro.md
+    │   ├── 2024-08-05-ml-basics.md
+    │   ├── 2024-08-05-organising-unittests.md
+    │   ├── 2024-08-05-python-mocking.md
+    │   ├── 2024-08-05-reinforcement-learning-intro.md
+    │   ├── 2024-08-05-shell-cheatsheet.md
+    │   ├── 2024-08-05-sql-cheatsheet.md
+    │   ├── 2024-08-05-variational-inference-intro.md
+    │   ├── 2024-08-11-cpp-fundamentals.md
+    │   └── 2024-12-23-orthogonal-linear-representation.md
+    ├── assets/
+    │   ├── gifs/
+    │   └── icons/
+    │       ├── favicon/
+    │       └── socials/
+    ├── bibtex/
+    │   ├── icra20.txt
+    │   ├── iwcmc17.txt
+    │   ├── msc-thesis.txt
+    │   └── neurips25.txt
+    ├── css/
+    │   ├── github.css
+    │   └── main.scss
+    ├── js/
+    │   ├── gif-display.js
+    │   └── site.js
+    ├── papers/
+    └── .github/
+        └── workflows/
+            └── jekyll-docker.yml
+
+================================================
+File: README.md
+================================================
+# Parchment
+A clean, single column blog template built for jekyll
+
+## Usage
+
+* To use this as your GitHub Page, fork this repository, and
+  rename it to `<username>.github.io`. Your site will be live
+  at `https://<username>.github.io/parchment-jekyll`.
+
+* You can customise variables in `_config.yml` and `css/*` files.
+
+* You can add markdown files, say `foo.md` in the root directory
+  of the repository. It will then be accessible like
+  `your.website.com/foo`.
+
+* To add posts, add your posts in the `_posts` directory. Follow
+  the naming convention `%yyyy-%mm-%dd-your-title-here.md`.
+
+* To add a profile picture, use class `profile-picture` around
+  the image.
+
+## Contributing
+Pull requests are welcome. For major changes, please open an
+issue first to discuss what you would like to change.
+
+## Credits
+This theme is inspired from [Xuning Yang's variation](https://github.com/xuningy/xuningy.github.io) of [Parchment](https://rahul-bothra.github.io/parchment/).
+
+## License
+[GNU GPL v3](LICENSE)
+
+
+
+================================================
+File: 404.html
+================================================
+---
+layout: default
+permalink: /404.html
+---
+
+<br>
+<center>
+    <h1>404 - Page not found</h1>
+</center>
+
+
+
+================================================
+File: ANAME
+================================================
+uzairakbar.com
+
+
+================================================
+File: CNAME
+================================================
+uzairakbar.com
+
+
+================================================
+File: Gemfile
+================================================
+# frozen_string_literal: true
+
+source "https://rubygems.org"
+
+# gem "rails"
+
+gem "jekyll", "~> 4.3"
+gem "kramdown-math-katex"
+
+
+================================================
+File: LICENSE
+================================================
+                    GNU GENERAL PUBLIC LICENSE
+                       Version 3, 29 June 2007
+
+ Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/>
+ Everyone is permitted to copy and distribute verbatim copies
+ of this license document, but changing it is not allowed.
+
+                            Preamble
+
+  The GNU General Public License is a free, copyleft license for
+software and other kinds of works.
+
+  The licenses for most software and other practical works are designed
+to take away your freedom to share and change the works.  By contrast,
+the GNU General Public License is intended to guarantee your freedom to
+share and change all versions of a program--to make sure it remains free
+software for all its users.  We, the Free Software Foundation, use the
+GNU General Public License for most of our software; it applies also to
+any other work released this way by its authors.  You can apply it to
+your programs, too.
+
+  When we speak of free software, we are referring to freedom, not
+price.  Our General Public Licenses are designed to make sure that you
+have the freedom to distribute copies of free software (and charge for
+them if you wish), that you receive source code or can get it if you
+want it, that you can change the software or use pieces of it in new
+free programs, and that you know you can do these things.
+
+  To protect your rights, we need to prevent others from denying you
+these rights or asking you to surrender the rights.  Therefore, you have
+certain responsibilities if you distribute copies of the software, or if
+you modify it: responsibilities to respect the freedom of others.
+
+  For example, if you distribute copies of such a program, whether
+gratis or for a fee, you must pass on to the recipients the same
+freedoms that you received.  You must make sure that they, too, receive
+or can get the source code.  And you must show them these terms so they
+know their rights.
+
+  Developers that use the GNU GPL protect your rights with two steps:
+(1) assert copyright on the software, and (2) offer you this License
+giving you legal permission to copy, distribute and/or modify it.
+
+  For the developers' and authors' protection, the GPL clearly explains
+that there is no warranty for this free software.  For both users' and
+authors' sake, the GPL requires that modified versions be marked as
+changed, so that their problems will not be attributed erroneously to
+authors of previous versions.
+
+  Some devices are designed to deny users access to install or run
+modified versions of the software inside them, although the manufacturer
+can do so.  This is fundamentally incompatible with the aim of
+protecting users' freedom to change the software.  The systematic
+pattern of such abuse occurs in the area of products for individuals to
+use, which is precisely where it is most unacceptable.  Therefore, we
+have designed this version of the GPL to prohibit the practice for those
+products.  If such problems arise substantially in other domains, we
+stand ready to extend this provision to those domains in future versions
+of the GPL, as needed to protect the freedom of users.
+
+  Finally, every program is threatened constantly by software patents.
+States should not allow patents to restrict development and use of
+software on general-purpose computers, but in those that do, we wish to
+avoid the special danger that patents applied to a free program could
+make it effectively proprietary.  To prevent this, the GPL assures that
+patents cannot be used to render the program non-free.
+
+  The precise terms and conditions for copying, distribution and
+modification follow.
+
+                       TERMS AND CONDITIONS
+
+  0. Definitions.
+
+  "This License" refers to version 3 of the GNU General Public License.
+
+  "Copyright" also means copyright-like laws that apply to other kinds of
+works, such as semiconductor masks.
+
+  "The Program" refers to any copyrightable work licensed under this
+License.  Each licensee is addressed as "you".  "Licensees" and
+"recipients" may be individuals or organizations.
+
+  To "modify" a work means to copy from or adapt all or part of the work
+in a fashion requiring copyright permission, other than the making of an
+exact copy.  The resulting work is called a "modified version" of the
+earlier work or a work "based on" the earlier work.
+
+  A "covered work" means either the unmodified Program or a work based
+on the Program.
+
+  To "propagate" a work means to do anything with it that, without
+permission, would make you directly or secondarily liable for
+infringement under applicable copyright law, except executing it on a
+computer or modifying a private copy.  Propagation includes copying,
+distribution (with or without modification), making available to the
+public, and in some countries other activities as well.
+
+  To "convey" a work means any kind of propagation that enables other
+parties to make or receive copies.  Mere interaction with a user through
+a computer network, with no transfer of a copy, is not conveying.
+
+  An interactive user interface displays "Appropriate Legal Notices"
+to the extent that it includes a convenient and prominently visible
+feature that (1) displays an appropriate copyright notice, and (2)
+tells the user that there is no warranty for the work (except to the
+extent that warranties are provided), that licensees may convey the
+work under this License, and how to view a copy of this License.  If
+the interface presents a list of user commands or options, such as a
+menu, a prominent item in the list meets this criterion.
+
+  1. Source Code.
+
+  The "source code" for a work means the preferred form of the work
+for making modifications to it.  "Object code" means any non-source
+form of a work.
+
+  A "Standard Interface" means an interface that either is an official
+standard defined by a recognized standards body, or, in the case of
+interfaces specified for a particular programming language, one that
+is widely used among developers working in that language.
+
+  The "System Libraries" of an executable work include anything, other
+than the work as a whole, that (a) is included in the normal form of
+packaging a Major Component, but which is not part of that Major
+Component, and (b) serves only to enable use of the work with that
+Major Component, or to implement a Standard Interface for which an
+implementation is available to the public in source code form.  A
+"Major Component", in this context, means a major essential component
+(kernel, window system, and so on) of the specific operating system
+(if any) on which the executable work runs, or a compiler used to
+produce the work, or an object code interpreter used to run it.
+
+  The "Corresponding Source" for a work in object code form means all
+the source code needed to generate, install, and (for an executable
+work) run the object code and to modify the work, including scripts to
+control those activities.  However, it does not include the work's
+System Libraries, or general-purpose tools or generally available free
+programs which are used unmodified in performing those activities but
+which are not part of the work.  For example, Corresponding Source
+includes interface definition files associated with source files for
+the work, and the source code for shared libraries and dynamically
+linked subprograms that the work is specifically designed to require,
+such as by intimate data communication or control flow between those
+subprograms and other parts of the work.
+
+  The Corresponding Source need not include anything that users
+can regenerate automatically from other parts of the Corresponding
+Source.
+
+  The Corresponding Source for a work in source code form is that
+same work.
+
+  2. Basic Permissions.
+
+  All rights granted under this License are granted for the term of
+copyright on the Program, and are irrevocable provided the stated
+conditions are met.  This License explicitly affirms your unlimited
+permission to run the unmodified Program.  The output from running a
+covered work is covered by this License only if the output, given its
+content, constitutes a covered work.  This License acknowledges your
+rights of fair use or other equivalent, as provided by copyright law.
+
+  You may make, run and propagate covered works that you do not
+convey, without conditions so long as your license otherwise remains
+in force.  You may convey covered works to others for the sole purpose
+of having them make modifications exclusively for you, or provide you
+with facilities for running those works, provided that you comply with
+the terms of this License in conveying all material for which you do
+not control copyright.  Those thus making or running the covered works
+for you must do so exclusively on your behalf, under your direction
+and control, on terms that prohibit them from making any copies of
+your copyrighted material outside their relationship with you.
+
+  Conveying under any other circumstances is permitted solely under
+the conditions stated below.  Sublicensing is not allowed; section 10
+makes it unnecessary.
+
+  3. Protecting Users' Legal Rights From Anti-Circumvention Law.
+
+  No covered work shall be deemed part of an effective technological
+measure under any applicable law fulfilling obligations under article
+11 of the WIPO copyright treaty adopted on 20 December 1996, or
+similar laws prohibiting or restricting circumvention of such
+measures.
+
+  When you convey a covered work, you waive any legal power to forbid
+circumvention of technological measures to the extent such circumvention
+is effected by exercising rights under this License with respect to
+the covered work, and you disclaim any intention to limit operation or
+modification of the work as a means of enforcing, against the work's
+users, your or third parties' legal rights to forbid circumvention of
+technological measures.
+
+  4. Conveying Verbatim Copies.
+
+  You may convey verbatim copies of the Program's source code as you
+receive it, in any medium, provided that you conspicuously and
+appropriately publish on each copy an appropriate copyright notice;
+keep intact all notices stating that this License and any
+non-permissive terms added in accord with section 7 apply to the code;
+keep intact all notices of the absence of any warranty; and give all
+recipients a copy of this License along with the Program.
+
+  You may charge any price or no price for each copy that you convey,
+and you may offer support or warranty protection for a fee.
+
+  5. Conveying Modified Source Versions.
+
+  You may convey a work based on the Program, or the modifications to
+produce it from the Program, in the form of source code under the
+terms of section 4, provided that you also meet all of these conditions:
+
+    a) The work must carry prominent notices stating that you modified
+    it, and giving a relevant date.
+
+    b) The work must carry prominent notices stating that it is
+    released under this License and any conditions added under section
+    7.  This requirement modifies the requirement in section 4 to
+    "keep intact all notices".
+
+    c) You must license the entire work, as a whole, under this
+    License to anyone who comes into possession of a copy.  This
+    License will therefore apply, along with any applicable section 7
+    additional terms, to the whole of the work, and all its parts,
+    regardless of how they are packaged.  This License gives no
+    permission to license the work in any other way, but it does not
+    invalidate such permission if you have separately received it.
+
+    d) If the work has interactive user interfaces, each must display
+    Appropriate Legal Notices; however, if the Program has interactive
+    interfaces that do not display Appropriate Legal Notices, your
+    work need not make them do so.
+
+  A compilation of a covered work with other separate and independent
+works, which are not by their nature extensions of the covered work,
+and which are not combined with it such as to form a larger program,
+in or on a volume of a storage or distribution medium, is called an
+"aggregate" if the compilation and its resulting copyright are not
+used to limit the access or legal rights of the compilation's users
+beyond what the individual works permit.  Inclusion of a covered work
+in an aggregate does not cause this License to apply to the other
+parts of the aggregate.
+
+  6. Conveying Non-Source Forms.
+
+  You may convey a covered work in object code form under the terms
+of sections 4 and 5, provided that you also convey the
+machine-readable Corresponding Source under the terms of this License,
+in one of these ways:
+
+    a) Convey the object code in, or embodied in, a physical product
+    (including a physical distribution medium), accompanied by the
+    Corresponding Source fixed on a durable physical medium
+    customarily used for software interchange.
+
+    b) Convey the object code in, or embodied in, a physical product
+    (including a physical distribution medium), accompanied by a
+    written offer, valid for at least three years and valid for as
+    long as you offer spare parts or customer support for that product
+    model, to give anyone who possesses the object code either (1) a
+    copy of the Corresponding Source for all the software in the
+    product that is covered by this License, on a durable physical
+    medium customarily used for software interchange, for a price no
+    more than your reasonable cost of physically performing this
+    conveying of source, or (2) access to copy the
+    Corresponding Source from a network server at no charge.
+
+    c) Convey individual copies of the object code with a copy of the
+    written offer to provide the Corresponding Source.  This
+    alternative is allowed only occasionally and noncommercially, and
+    only if you received the object code with such an offer, in accord
+    with subsection 6b.
+
+    d) Convey the object code by offering access from a designated
+    place (gratis or for a charge), and offer equivalent access to the
+    Corresponding Source in the same way through the same place at no
+    further charge.  You need not require recipients to copy the
+    Corresponding Source along with the object code.  If the place to
+    copy the object code is a network server, the Corresponding Source
+    may be on a different server (operated by you or a third party)
+    that supports equivalent copying facilities, provided you maintain
+    clear directions next to the object code saying where to find the
+    Corresponding Source.  Regardless of what server hosts the
+    Corresponding Source, you remain obligated to ensure that it is
+    available for as long as needed to satisfy these requirements.
+
+    e) Convey the object code using peer-to-peer transmission, provided
+    you inform other peers where the object code and Corresponding
+    Source of the work are being offered to the general public at no
+    charge under subsection 6d.
+
+  A separable portion of the object code, whose source code is excluded
+from the Corresponding Source as a System Library, need not be
+included in conveying the object code work.
+
+  A "User Product" is either (1) a "consumer product", which means any
+tangible personal property which is normally used for personal, family,
+or household purposes, or (2) anything designed or sold for incorporation
+into a dwelling.  In determining whether a product is a consumer product,
+doubtful cases shall be resolved in favor of coverage.  For a particular
+product received by a particular user, "normally used" refers to a
+typical or common use of that class of product, regardless of the status
+of the particular user or of the way in which the particular user
+actually uses, or expects or is expected to use, the product.  A product
+is a consumer product regardless of whether the product has substantial
+commercial, industrial or non-consumer uses, unless such uses represent
+the only significant mode of use of the product.
+
+  "Installation Information" for a User Product means any methods,
+procedures, authorization keys, or other information required to install
+and execute modified versions of a covered work in that User Product from
+a modified version of its Corresponding Source.  The information must
+suffice to ensure that the continued functioning of the modified object
+code is in no case prevented or interfered with solely because
+modification has been made.
+
+  If you convey an object code work under this section in, or with, or
+specifically for use in, a User Product, and the conveying occurs as
+part of a transaction in which the right of possession and use of the
+User Product is transferred to the recipient in perpetuity or for a
+fixed term (regardless of how the transaction is characterized), the
+Corresponding Source conveyed under this section must be accompanied
+by the Installation Information.  But this requirement does not apply
+if neither you nor any third party retains the ability to install
+modified object code on the User Product (for example, the work has
+been installed in ROM).
+
+  The requirement to provide Installation Information does not include a
+requirement to continue to provide support service, warranty, or updates
+for a work that has been modified or installed by the recipient, or for
+the User Product in which it has been modified or installed.  Access to a
+network may be denied when the modification itself materially and
+adversely affects the operation of the network or violates the rules and
+protocols for communication across the network.
+
+  Corresponding Source conveyed, and Installation Information provided,
+in accord with this section must be in a format that is publicly
+documented (and with an implementation available to the public in
+source code form), and must require no special password or key for
+unpacking, reading or copying.
+
+  7. Additional Terms.
+
+  "Additional permissions" are terms that supplement the terms of this
+License by making exceptions from one or more of its conditions.
+Additional permissions that are applicable to the entire Program shall
+be treated as though they were included in this License, to the extent
+that they are valid under applicable law.  If additional permissions
+apply only to part of the Program, that part may be used separately
+under those permissions, but the entire Program remains governed by
+this License without regard to the additional permissions.
+
+  When you convey a copy of a covered work, you may at your option
+remove any additional permissions from that copy, or from any part of
+it.  (Additional permissions may be written to require their own
+removal in certain cases when you modify the work.)  You may place
+additional permissions on material, added by you to a covered work,
+for which you have or can give appropriate copyright permission.
+
+  Notwithstanding any other provision of this License, for material you
+add to a covered work, you may (if authorized by the copyright holders of
+that material) supplement the terms of this License with terms:
+
+    a) Disclaiming warranty or limiting liability differently from the
+    terms of sections 15 and 16 of this License; or
+
+    b) Requiring preservation of specified reasonable legal notices or
+    author attributions in that material or in the Appropriate Legal
+    Notices displayed by works containing it; or
+
+    c) Prohibiting misrepresentation of the origin of that material, or
+    requiring that modified versions of such material be marked in
+    reasonable ways as different from the original version; or
+
+    d) Limiting the use for publicity purposes of names of licensors or
+    authors of the material; or
+
+    e) Declining to grant rights under trademark law for use of some
+    trade names, trademarks, or service marks; or
+
+    f) Requiring indemnification of licensors and authors of that
+    material by anyone who conveys the material (or modified versions of
+    it) with contractual assumptions of liability to the recipient, for
+    any liability that these contractual assumptions directly impose on
+    those licensors and authors.
+
+  All other non-permissive additional terms are considered "further
+restrictions" within the meaning of section 10.  If the Program as you
+received it, or any part of it, contains a notice stating that it is
+governed by this License along with a term that is a further
+restriction, you may remove that term.  If a license document contains
+a further restriction but permits relicensing or conveying under this
+License, you may add to a covered work material governed by the terms
+of that license document, provided that the further restriction does
+not survive such relicensing or conveying.
+
+  If you add terms to a covered work in accord with this section, you
+must place, in the relevant source files, a statement of the
+additional terms that apply to those files, or a notice indicating
+where to find the applicable terms.
+
+  Additional terms, permissive or non-permissive, may be stated in the
+form of a separately written license, or stated as exceptions;
+the above requirements apply either way.
+
+  8. Termination.
+
+  You may not propagate or modify a covered work except as expressly
+provided under this License.  Any attempt otherwise to propagate or
+modify it is void, and will automatically terminate your rights under
+this License (including any patent licenses granted under the third
+paragraph of section 11).
+
+  However, if you cease all violation of this License, then your
+license from a particular copyright holder is reinstated (a)
+provisionally, unless and until the copyright holder explicitly and
+finally terminates your license, and (b) permanently, if the copyright
+holder fails to notify you of the violation by some reasonable means
+prior to 60 days after the cessation.
+
+  Moreover, your license from a particular copyright holder is
+reinstated permanently if the copyright holder notifies you of the
+violation by some reasonable means, this is the first time you have
+received notice of violation of this License (for any work) from that
+copyright holder, and you cure the violation prior to 30 days after
+your receipt of the notice.
+
+  Termination of your rights under this section does not terminate the
+licenses of parties who have received copies or rights from you under
+this License.  If your rights have been terminated and not permanently
+reinstated, you do not qualify to receive new licenses for the same
+material under section 10.
+
+  9. Acceptance Not Required for Having Copies.
+
+  You are not required to accept this License in order to receive or
+run a copy of the Program.  Ancillary propagation of a covered work
+occurring solely as a consequence of using peer-to-peer transmission
+to receive a copy likewise does not require acceptance.  However,
+nothing other than this License grants you permission to propagate or
+modify any covered work.  These actions infringe copyright if you do
+not accept this License.  Therefore, by modifying or propagating a
+covered work, you indicate your acceptance of this License to do so.
+
+  10. Automatic Licensing of Downstream Recipients.
+
+  Each time you convey a covered work, the recipient automatically
+receives a license from the original licensors, to run, modify and
+propagate that work, subject to this License.  You are not responsible
+for enforcing compliance by third parties with this License.
+
+  An "entity transaction" is a transaction transferring control of an
+organization, or substantially all assets of one, or subdividing an
+organization, or merging organizations.  If propagation of a covered
+work results from an entity transaction, each party to that
+transaction who receives a copy of the work also receives whatever
+licenses to the work the party's predecessor in interest had or could
+give under the previous paragraph, plus a right to possession of the
+Corresponding Source of the work from the predecessor in interest, if
+the predecessor has it or can get it with reasonable efforts.
+
+  You may not impose any further restrictions on the exercise of the
+rights granted or affirmed under this License.  For example, you may
+not impose a license fee, royalty, or other charge for exercise of
+rights granted under this License, and you may not initiate litigation
+(including a cross-claim or counterclaim in a lawsuit) alleging that
+any patent claim is infringed by making, using, selling, offering for
+sale, or importing the Program or any portion of it.
+
+  11. Patents.
+
+  A "contributor" is a copyright holder who authorizes use under this
+License of the Program or a work on which the Program is based.  The
+work thus licensed is called the contributor's "contributor version".
+
+  A contributor's "essential patent claims" are all patent claims
+owned or controlled by the contributor, whether already acquired or
+hereafter acquired, that would be infringed by some manner, permitted
+by this License, of making, using, or selling its contributor version,
+but do not include claims that would be infringed only as a
+consequence of further modification of the contributor version.  For
+purposes of this definition, "control" includes the right to grant
+patent sublicenses in a manner consistent with the requirements of
+this License.
+
+  Each contributor grants you a non-exclusive, worldwide, royalty-free
+patent license under the contributor's essential patent claims, to
+make, use, sell, offer for sale, import and otherwise run, modify and
+propagate the contents of its contributor version.
+
+  In the following three paragraphs, a "patent license" is any express
+agreement or commitment, however denominated, not to enforce a patent
+(such as an express permission to practice a patent or covenant not to
+sue for patent infringement).  To "grant" such a patent license to a
+party means to make such an agreement or commitment not to enforce a
+patent against the party.
+
+  If you convey a covered work, knowingly relying on a patent license,
+and the Corresponding Source of the work is not available for anyone
+to copy, free of charge and under the terms of this License, through a
+publicly available network server or other readily accessible means,
+then you must either (1) cause the Corresponding Source to be so
+available, or (2) arrange to deprive yourself of the benefit of the
+patent license for this particular work, or (3) arrange, in a manner
+consistent with the requirements of this License, to extend the patent
+license to downstream recipients.  "Knowingly relying" means you have
+actual knowledge that, but for the patent license, your conveying the
+covered work in a country, or your recipient's use of the covered work
+in a country, would infringe one or more identifiable patents in that
+country that you have reason to believe are valid.
+
+  If, pursuant to or in connection with a single transaction or
+arrangement, you convey, or propagate by procuring conveyance of, a
+covered work, and grant a patent license to some of the parties
+receiving the covered work authorizing them to use, propagate, modify
+or convey a specific copy of the covered work, then the patent license
+you grant is automatically extended to all recipients of the covered
+work and works based on it.
+
+  A patent license is "discriminatory" if it does not include within
+the scope of its coverage, prohibits the exercise of, or is
+conditioned on the non-exercise of one or more of the rights that are
+specifically granted under this License.  You may not convey a covered
+work if you are a party to an arrangement with a third party that is
+in the business of distributing software, under which you make payment
+to the third party based on the extent of your activity of conveying
+the work, and under which the third party grants, to any of the
+parties who would receive the covered work from you, a discriminatory
+patent license (a) in connection with copies of the covered work
+conveyed by you (or copies made from those copies), or (b) primarily
+for and in connection with specific products or compilations that
+contain the covered work, unless you entered into that arrangement,
+or that patent license was granted, prior to 28 March 2007.
+
+  Nothing in this License shall be construed as excluding or limiting
+any implied license or other defenses to infringement that may
+otherwise be available to you under applicable patent law.
+
+  12. No Surrender of Others' Freedom.
+
+  If conditions are imposed on you (whether by court order, agreement or
+otherwise) that contradict the conditions of this License, they do not
+excuse you from the conditions of this License.  If you cannot convey a
+covered work so as to satisfy simultaneously your obligations under this
+License and any other pertinent obligations, then as a consequence you may
+not convey it at all.  For example, if you agree to terms that obligate you
+to collect a royalty for further conveying from those to whom you convey
+the Program, the only way you could satisfy both those terms and this
+License would be to refrain entirely from conveying the Program.
+
+  13. Use with the GNU Affero General Public License.
+
+  Notwithstanding any other provision of this License, you have
+permission to link or combine any covered work with a work licensed
+under version 3 of the GNU Affero General Public License into a single
+combined work, and to convey the resulting work.  The terms of this
+License will continue to apply to the part which is the covered work,
+but the special requirements of the GNU Affero General Public License,
+section 13, concerning interaction through a network will apply to the
+combination as such.
+
+  14. Revised Versions of this License.
+
+  The Free Software Foundation may publish revised and/or new versions of
+the GNU General Public License from time to time.  Such new versions will
+be similar in spirit to the present version, but may differ in detail to
+address new problems or concerns.
+
+  Each version is given a distinguishing version number.  If the
+Program specifies that a certain numbered version of the GNU General
+Public License "or any later version" applies to it, you have the
+option of following the terms and conditions either of that numbered
+version or of any later version published by the Free Software
+Foundation.  If the Program does not specify a version number of the
+GNU General Public License, you may choose any version ever published
+by the Free Software Foundation.
+
+  If the Program specifies that a proxy can decide which future
+versions of the GNU General Public License can be used, that proxy's
+public statement of acceptance of a version permanently authorizes you
+to choose that version for the Program.
+
+  Later license versions may give you additional or different
+permissions.  However, no additional obligations are imposed on any
+author or copyright holder as a result of your choosing to follow a
+later version.
+
+  15. Disclaimer of Warranty.
+
+  THERE IS NO WARRANTY FOR THE PROGRAM, TO THE EXTENT PERMITTED BY
+APPLICABLE LAW.  EXCEPT WHEN OTHERWISE STATED IN WRITING THE COPYRIGHT
+HOLDERS AND/OR OTHER PARTIES PROVIDE THE PROGRAM "AS IS" WITHOUT WARRANTY
+OF ANY KIND, EITHER EXPRESSED OR IMPLIED, INCLUDING, BUT NOT LIMITED TO,
+THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR
+PURPOSE.  THE ENTIRE RISK AS TO THE QUALITY AND PERFORMANCE OF THE PROGRAM
+IS WITH YOU.  SHOULD THE PROGRAM PROVE DEFECTIVE, YOU ASSUME THE COST OF
+ALL NECESSARY SERVICING, REPAIR OR CORRECTION.
+
+  16. Limitation of Liability.
+
+  IN NO EVENT UNLESS REQUIRED BY APPLICABLE LAW OR AGREED TO IN WRITING
+WILL ANY COPYRIGHT HOLDER, OR ANY OTHER PARTY WHO MODIFIES AND/OR CONVEYS
+THE PROGRAM AS PERMITTED ABOVE, BE LIABLE TO YOU FOR DAMAGES, INCLUDING ANY
+GENERAL, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES ARISING OUT OF THE
+USE OR INABILITY TO USE THE PROGRAM (INCLUDING BUT NOT LIMITED TO LOSS OF
+DATA OR DATA BEING RENDERED INACCURATE OR LOSSES SUSTAINED BY YOU OR THIRD
+PARTIES OR A FAILURE OF THE PROGRAM TO OPERATE WITH ANY OTHER PROGRAMS),
+EVEN IF SUCH HOLDER OR OTHER PARTY HAS BEEN ADVISED OF THE POSSIBILITY OF
+SUCH DAMAGES.
+
+  17. Interpretation of Sections 15 and 16.
+
+  If the disclaimer of warranty and limitation of liability provided
+above cannot be given local legal effect according to their terms,
+reviewing courts shall apply local law that most closely approximates
+an absolute waiver of all civil liability in connection with the
+Program, unless a warranty or assumption of liability accompanies a
+copy of the Program in return for a fee.
+
+                     END OF TERMS AND CONDITIONS
+
+            How to Apply These Terms to Your New Programs
+
+  If you develop a new program, and you want it to be of the greatest
+possible use to the public, the best way to achieve this is to make it
+free software which everyone can redistribute and change under these terms.
+
+  To do so, attach the following notices to the program.  It is safest
+to attach them to the start of each source file to most effectively
+state the exclusion of warranty; and each file should have at least
+the "copyright" line and a pointer to where the full notice is found.
+
+    {one line to give the program's name and a brief idea of what it does.}
+    Copyright (C) {year}  {name of author}
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
+
+Also add information on how to contact you by electronic and paper mail.
+
+  If the program does terminal interaction, make it output a short
+notice like this when it starts in an interactive mode:
+
+    {project}  Copyright (C) {year}  {fullname}
+    This program comes with ABSOLUTELY NO WARRANTY; for details type `show w'.
+    This is free software, and you are welcome to redistribute it
+    under certain conditions; type `show c' for details.
+
+The hypothetical commands `show w' and `show c' should show the appropriate
+parts of the General Public License.  Of course, your program's commands
+might be different; for a GUI interface, you would use an "about box".
+
+  You should also get your employer (if you work as a programmer) or school,
+if any, to sign a "copyright disclaimer" for the program, if necessary.
+For more information on this, and how to apply and follow the GNU GPL, see
+<http://www.gnu.org/licenses/>.
+
+  The GNU General Public License does not permit incorporating your program
+into proprietary programs.  If your program is a subroutine library, you
+may consider it more useful to permit linking proprietary applications with
+the library.  If this is what you want to do, use the GNU Lesser General
+Public License instead of this License.  But first, please read
+<http://www.gnu.org/philosophy/why-not-lgpl.html>.
+
+
+
+================================================
+File: _config.yml
+================================================
+title: Uzair Akbar
+author: Uzair Akbar
+subtitle: A place to dump my study notes.
+
+google_analytics: UA-227265779-1
+
+url:
+baseurl:
+
+footer_url: "https://www.uzairakbar.com"
+footer_text: "Uzair Akbar"
+
+profile-picture: assets/profile.png
+favicon_location: assets/icons/favicon/favicon120.png
+social_icons: assets/icons/socials
+
+permalink: /:categories/:year-:month-:day-:title/
+sass:
+    style: compressed
+    sass_dir: css
+
+navbar:
+ - name: "home"
+   link: "/"
+ - name: "cv"
+   link: "/uzair_cv.pdf"
+ - name: "notes"
+   link: "/notes"
+
+markdown: kramdown
+kramdown:
+  math_engine: katex
+
+
+
+================================================
+File: index.md
+================================================
+---
+layout: default
+---
+
+<img class="profile-picture" src="{{site.baseurl}}/{{site.profile-picture}}">
+
+I dump my study notes here because I have a habit of losing physical copies.
+
+### Publications
+
+1.  [**An Analysis of Causal Effect Estimation using Outcome Invariant Data Augmentation**](https://neurips.cc/virtual/2025/poster/119327)  
+**U. Akbar**, N. Kilbertus, H. Shen, K. Muandet, B. Dai,
+*Advances in Neural Information Processing Systems (NeurIPS)*, 2025 **(Spotlight, top ~3%)**  
+\[[bibtex](bibtex/neurips25.txt)\]
+\[[pdf](https://neurips.cc/virtual/2025/poster/119327)\]
+
+3.  [**Adversarial Appearance Learning in Augmented Cityscapes for Pedestrian Recognition in Autonomous Driving**](https://ieeexplore.ieee.org/abstract/document/9197024)  
+A. Savkin, T. Lapotre, K. Strauss, **U. Akbar**, F. Tombari,
+*IEEE International Conference on Robotics and Automation (ICRA)*, 2020  
+\[[bibtex](bibtex/icra20.txt)\]
+\[[pdf](/papers/ICRA20.pdf)\]
+
+4.  [**Performance Analysis of Decoupled Cell Association in Multi-Tier Hybrid Networks using Real Blockage Environments**](https://ieeexplore.ieee.org/abstract/document/7986263)  
+O. W. Bhatti, H. Suhail, **U. Akbar**, S. A. Hassan, H. Pervaiz, L. Musavian, Q. Ni,
+*IEEE International Wireless Communications and Mobile Computing Conference (IWCMC)*, June 2017  
+\[[bibtex](bibtex/iwcmc17.txt)\]
+\[[pdf](/papers/IWCMC17.pdf)\]
+
+
+<!-- ### Talks
+
+1. Invited talk: Toward intuitive human controlled MAVs: motion primitives based teleoperation  
+*IROS 2018 workshop: Vision based Drones: What's Next?* -->
+
+### Other projects
+
+1. LIDAR based obstacle avoidance using reinforcment learning
+\[[code](https://github.com/uzairakbar/rl-obstacle-avoidance)\]
+[<a class="gif-link" id="rl-obstacle-avoidance-sim">sim</a>/<a class="gif-link" id="rl-obstacle-avoidance-real">real</a> gifs]
+<img class="gif" id="rl-obstacle-avoidance-sim-gif" src="assets/gifs/rl-obstacle-avoidance-sim.gif"/>
+<img class="gif" id="rl-obstacle-avoidance-real-gif" src="assets/gifs/rl-obstacle-avoidance-real.gif"/>
+
+
+
+
+================================================
+File: notes.html
+================================================
+---
+layout: default
+---
+
+<br>
+<div style="text-align:center;margin-bottom:15px">Hope these will be as helpful to you today as they will be for future me.
+</div>
+<div style="text-align:center;margin-bottom:15px">
+    <a href="{{ site.baseurl }}/tags">view by tags</a>: &nbsp&nbsp
+{% for tag in site.tags %}
+          <a href="{{ site.baseurl }}/tags/#{{ tag[0] }}">{{ tag[0] }} ({{ tag[1].size }})</a>&nbsp&nbsp&nbsp&nbsp
+{% endfor %}
+</div>
+<hr>
+
+
+{% for post in site.posts %}
+  {% if post.category == "notes" %}
+      <a href="{{site.baseurl}}{{ post.url }}" class="post-title">
+          {{ post.title }}
+      </a>
+      <div class="post-details">
+          {{ post.date | date: "%m/%d/%Y" }}
+          <br>
+          {% for tag in post.tags %}
+              {% if post.tags.first == tag %}
+                  [
+              {% endif %}
+              <a href="{{ site.baseurl }}/tags/#{{ tag }}">{{ tag }}</a>
+              {% if post.tags.last == tag %}
+                  ]
+              {% else %}
+                  ,
+              {% endif %}
+          {% endfor %}
+      </div>
+      <br>
+      <div class="post-snippet">
+          {{ post.snippet }}
+      </div>
+      <br>
+      {% if forloop.last == false %}
+          <hr>
+      {% endif %}
+  {% endif %}
+{% endfor %}
+
+
+
+================================================
+File: papers.md
+================================================
+---
+layout: default
+---
+
+## All Publications
+
+1. A. Savkin, T. Lapotre, K. Strauss, U. Akbar, F. Tombari, "Adversarial Appearance Learning in Augmented Cityscapes for Pedestrian Recognition in Autonomous Driving," IEEE International Conference on Robotics and Automation (ICRA), 2020. \[[PDF](https://ieeexplore.ieee.org/abstract/document/9197024)\]
+
+2. O. W. Bhatti, H. Suhail, U. Akbar, S. A. Hassan, H. Pervaiz, L. Musavian, Q. Ni, "Performance Analysis of Decoupled Cell Association in Multi-Tier Hybrid Networks using Real Blockage Environments," IEEE International Wireless Communications and Mobile Computing Conference (IWCMC), Spain, June 2017. \[[PDF](https://ieeexplore.ieee.org/abstract/document/7986263)\]
+
+
+================================================
+File: tags.html
+================================================
+---
+layout: default
+permalink: /tags/
+---
+
+<ul>
+    {% for tag in site.tags %}
+        <li id="{{ tag[0] }}">
+            <b>{{ tag[0] }}</b>
+        </li>
+        {% for post in tag[1] %}
+            {{ post.date | date:"%Y-%m-%d" }} &raquo; <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+            <br>
+        {% endfor %}
+        <br>
+    {% endfor %}
+</ul>
+
+
+
+================================================
+File: _includes/footer.html
+================================================
+<div class="footer">
+    <br><hr>
+    <div class="container">
+    <ul id="socials" class="alignable pull-left socials-ul">
+        <li class="alignable socials-list">
+        <a href="https://github.com/uzairakbar">
+            <img class="socialicon" src="{{ site.baseurl }}/{{ site.social_icons }}/github240.png" height="20" width="20"></a>
+        </a>
+        </li>
+        <li class="alignable socials-list">
+        <a href="https://www.linkedin.com/in/uzair25/">
+            <img class="socialicon" src="{{ site.baseurl }}/{{ site.social_icons }}/linkedin240.png" height="20" width="20"></a>
+        </a>
+        </li>
+        <li class="alignable socials-list">
+        <a href="https://x.com/uzairakbar25">
+            <img class="socialicon" src="{{ site.baseurl }}/{{ site.social_icons }}/twitter240.png" height="20" width="20"></a>
+        </a>
+        </li>
+        <!-- <li class="alignable socials-list">
+        <a href="#">
+            <img class="socialicon" src="{{ site.baseurl }}/{{ site.social_icons }}/instagram240.png" height="20" width="20"></a>
+        </a>
+        </li> -->
+        <li class="alignable socials-list">
+        <a href="https://www.youtube.com/@CalisthenicsLog">
+            <img class="socialicon" src="{{ site.baseurl }}/{{ site.social_icons }}/youtube240.png" height="20" width="20"></a>
+        </a>
+        </li>
+        <li class="alignable socials-list">
+        <a href="https://scholar.google.de/citations?user=fh3DqPAAAAAJ&hl">
+            <img class="socialicon" src="{{ site.baseurl }}/{{ site.social_icons }}/gscholar240.png" height="20" width="20"></a>
+        </a>
+        </li>
+    </ul>
+    <p id="copyright" class="alignable pull-right">Copyright &copy; {{ 'now' | date: "%Y" }} <a href="{{ site.footer_url }}" style="color: black">{{ site.footer_text }}</a> | Theme Credits to <a href="https://www.xuningyang.com">Xuning Yang</a></p>
+    </div>
+    <div style="clear:both"></div>
+</div>
+
+
+================================================
+File: _includes/ga.html
+================================================
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ site.google_analytics }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', '{{ site.google_analytics }}');
+</script>
+
+
+================================================
+File: _includes/head.html
+================================================
+<head>
+    <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="notes, {{ site.author }}, {{ site.title }}, jekyll">
+    <meta name="author" content="{{ site.author }}">
+    {% if page.url == "/404.html" %}
+        <meta http-equiv="refresh" content="5; url=/">
+    {% endif %}
+    {% if page.snippet %}
+        {% assign desc = page.snippet %}
+    {% else %}
+        {% assign desc = site.subtitle %}
+    {% endif %}
+    {% if page.title %}
+        {% assign title = page.title %}
+    {% else %}
+        {% assign title = site.title %}
+    {% endif %}
+
+    <meta name="description" content="{{ desc }}">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,300italic" rel="stylesheet" type="text/css" />
+    <link href='https://fonts.googleapis.com/css?family=Inconsolata:400,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/main.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/css/github.css">
+    <link rel="icon" type="image/ico" href="{{site.url}}{{ site.baseurl }}/{{site.favicon_location}}">
+    <link rel="shortcut-icon" type="image/ico" href="{{site.url}}{{ site.baseurl }}/{{site.favicon_location}}">
+
+    <!-- For Facebook -->
+    <meta property="og:title" content="{{ title }}" />
+    <meta property="og:image" content="{{site.url}}{{ site.baseurl }}/{{site.favicon_location}}" />
+    <meta property="og:description" content="{{ desc }}" />
+
+    <!-- For Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="{{ title }}" />
+    <meta name="twitter:description" content="{{ desc }}" />
+    <meta name="twitter:image" content="{{site.url}}{{ site.baseurl }}/{{site.favicon_location}}" />
+
+    <!-- GA -->
+    {% if site.google_analytics and jekyll.environment == 'production' %}
+    {% include ga.html %}
+    {% endif %}
+
+    <!-- KaTeX -->
+    {% if page.katex %}
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            renderMathInElement(document.body, {
+                // ...options...
+            });
+        });
+    </script>
+    {% endif %}
+
+</head>
+
+
+
+================================================
+File: _includes/image.html
+================================================
+<!-- use case:
+include image.html url="/images/my-cat.jpg" description="My cat, Robert Downey Jr." width = "50%" hide="true"
+-->
+<!-- Xuning: hide is used to hide content from mainbody but show up in the gallery. Exclude if not using -->
+{% unless include.hide %}
+<figure class="image" >
+  <img src="{{ include.url }}" alt="{{ include.description }}" style="width: {{ include.width }};">
+  <figcaption class="caption">{{ include.description }}</figcaption>
+</figure>
+{% endunless %}
+
+
+
+================================================
+File: _includes/lightbox.html
+================================================
+<style>
+.lightbox {width: 100%; height: 100%; position: fixed; top: 0; left: 0; background: rgba(0,0,0,0.85); z-index: 9999999; line-height: 0; cursor: pointer;}
+.lightbox .img {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translateX(-50%) translateY(-50%);
+	-webkit-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	max-width: 100%;
+	max-height: 100%;
+}
+.lightbox .img img {opacity: 0; pointer-events: none; width: auto;}
+@media screen and (min-width: 1200px) {
+    .lightbox .img {
+		max-width: 1200px;
+    }
+}
+@media screen and (min-height: 1200px) {
+    .lightbox img {
+		max-height: 1200px;
+	}
+}
+.lightbox span {
+		display: block;
+		position: fixed;
+		bottom: 13px;
+		height: 1.5em;
+		line-height: 1.4em;
+		width: 100%;
+		text-align: center;
+		color: white;
+		text-shadow:
+    -1px -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+{% if include.lightbox_captions == "false" %}.lightbox span {display: none;}{% endif %}
+{% if include.lightbox_captions == "true" %}.lightbox span {display: block;}{% endif %}
+{% if page.lightbox_captions == false %}.lightbox span {display: none;}{% endif %}
+{% if page.lightbox_captions == true %}.lightbox span {display: block;}{% endif %}
+
+.lightbox .videoWrapperContainer {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	-ms-transform: translateX(-50%) translateY(-50%);
+	-webkit-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	max-width: 900px;
+	max-height: 100%;
+}
+.lightbox .videoWrapperContainer .videoWrapper {
+	height: 0;
+	line-height: 0;
+	margin: 0;
+	padding: 0;
+	position: relative;
+	padding-bottom: 56.333%; /* custom */
+	background: black;
+}
+.lightbox .videoWrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 0;
+	display: block;
+}
+.lightbox #prev, .lightbox #next {height: 50px; line-height: 36px; display: none; margin-top: -25px; position: fixed; top: 50%; padding: 0 15px; cursor: pointer; text-decoration: none; z-index: 99; color: white; font-size: 60px;}
+.lightbox.gallery #prev, .lightbox.gallery #next {display: block;}
+.lightbox #prev {left: 0;}
+.lightbox #next {right: 0;}
+.lightbox #close {height: 50px; width: 50px; position: fixed; cursor: pointer; text-decoration: none; z-index: 99; right: 0; top: 0;}
+.lightbox #close:after, .lightbox #close:before {position: absolute; margin-top: 22px; margin-left: 14px; content: ""; height: 3px; background: white; width: 23px;
+-webkit-transform-origin: 50% 50%;
+-moz-transform-origin: 50% 50%;
+-o-transform-origin: 50% 50%;
+transform-origin: 50% 50%;
+/* Safari */
+-webkit-transform: rotate(-45deg);
+/* Firefox */
+-moz-transform: rotate(-45deg);
+/* IE */
+-ms-transform: rotate(-45deg);
+/* Opera */
+-o-transform: rotate(-45deg);
+}
+.lightbox #close:after {
+/* Safari */
+-webkit-transform: rotate(45deg);
+/* Firefox */
+-moz-transform: rotate(45deg);
+/* IE */
+-ms-transform: rotate(45deg);
+/* Opera */
+-o-transform: rotate(45deg);
+}
+.lightbox, .lightbox * {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+</style>
+
+<script>
+function is_youtubelink(url) {
+  var p = /^(?:https?:\/\/)?(?:www\.)?(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))((\w|-){11})(?:\S+)?$/;
+  return (url.match(p)) ? RegExp.$1 : false;
+}
+function is_imagelink(url) {
+	var p = /([a-z\-_0-9\/\:\.]*\.(jpg|jpeg|png|gif))/i;
+	return (url.match(p)) ? true : false;
+}
+function is_vimeolink(url,el) {
+	var id = false;
+	$.ajax({
+	  url: 'https://vimeo.com/api/oembed.json?url='+url,
+	  async: true,
+	  success: function(response) {
+		if(response.video_id) {
+		  id = response.video_id;
+		  $(el).addClass('lightbox-vimeo').attr('data-id',id);
+		}
+	  }
+	});
+}
+
+$(document).ready(function() {
+	//add classes to links to be able to initiate lightboxes
+	$("a").each(function(){
+		var url = $(this).attr('href');
+		if(url) {
+			if(url.indexOf('vimeo') !== -1 && !$(this).hasClass('no-lightbox')) is_vimeolink(url,$(this));
+			if(is_youtubelink(url) && !$(this).hasClass('no-lightbox')) $(this).addClass('lightbox-youtube').attr('data-id',is_youtubelink(url));
+			if(is_imagelink(url) && !$(this).hasClass('no-lightbox')) {
+				$(this).addClass('lightbox-image');
+				var href = $(this).attr('href');
+				var filename = href.split('/').pop();
+				var split = filename.split(".");
+				var name = split[0];
+				$(this).attr('title',name);
+				// Xuning: Set caption to none if there isn't any
+				if(	!$(this).attr('caption'))
+					$(this).attr('caption', '')
+				// console.log(	$(this).attr('caption') );
+			}
+		}
+	});
+
+	// Xuning VERSION 1: Lightbox gallery WITH all the <a href> under the SAME <div>, no level skipping.
+	//remove the clicked lightbox
+	// $("body").on("click", ".lightbox", function(event){
+	// 	if($(this).hasClass('gallery')) {
+	// 		$(this).remove();
+	//
+	// 		// Scroll to the next item
+	// 		if($(event.target).attr('id')=='next') {
+	// 			//next item
+	// 			if($("a.gallery.current").nextAll("a.gallery:first").length) $("a.gallery.current").nextAll("a.gallery:first").click();
+	// 			else $("a.gallery.current").find("a.gallery").first().click();
+	// 		}
+	// 		else if ($(event.target).attr('id')=='prev') {
+	// 			//prev item
+	// 			if($("a.gallery.current").prevAll("a.gallery:first").length) $("a.gallery.current").prevAll("a.gallery:first").click();
+	// 			else $("a.gallery.current").find("a.gallery").last().click();
+	// 		}
+	// 		else {
+	// 			$("a.gallery").removeClass('gallery');
+	// 		}
+	// 	}
+	// 	else $(this).remove();
+	// });
+
+	// Xuning Version 2: Lightbox gallery WITH an image-specific div, inside a larger image gallery div.
+	$("body").on("click", ".lightbox", function(event){
+		if($(this).hasClass('gallery')) {
+			$(this).remove();
+
+			// Scroll to the next item
+			if($(event.target).attr('id')=='next') {
+				// next item
+				if($("a.gallery.current").parent().nextAll().first().length) {
+					 $("a.gallery.current").parent().nextAll().first().children().click();
+				}
+				else {
+					// Directly go to the first image. search through the scrape-gallery to find a href's, then select the first element.
+					$("a.gallery.current").parent().parent().find("a[class*='lightbox-']").first().click();
+				}
+			}
+			else if ($(event.target).attr('id')=='prev') {
+				//prev item
+				if($("a.gallery.current").parent().prevAll().first().length) $("a.gallery.current").parent().prevAll().first().children().click();
+				else {
+					$("a.gallery.current").parent().parent().find("a[class*='lightbox-']").last().click();
+				}
+			}
+			else {
+				$("a.gallery").removeClass('gallery');
+			}
+		}
+		else $(this).remove();
+	});
+	//prevent image from being draggable (for swipe)
+	$("body").on('dragstart', ".lightbox img", function(event) { event.preventDefault(); });
+	//add the youtube lightbox on click
+	$("a.lightbox-youtube").click(function(event){
+		event.preventDefault();
+		$('<div class="lightbox"><a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><div class="videoWrapperContainer"><div class="videoWrapper"><iframe src="https://www.youtube.com/embed/'+$(this).attr('data-id')+'?autoplay=1&showinfo=0&rel=0"></iframe></div></div></div>').appendTo('body');
+	});
+	//add the image lightbox on click
+	// $("a.lightbox-image").click(function(event){
+	// 	event.preventDefault();
+	// 	$('<div class="lightbox"><a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><div class="img" style="background: url('+$(this).attr('href').replace(/ /g,"%20")+') center center / contain no-repeat;" title="'+$(this).attr('title')+'" ><img src="'+$(this).attr('href')+'" alt="'+$(this).attr('title')+'" /></div><span>'+$(this).attr('title')+'</span></div>').appendTo('body');
+	// });
+	// Xuning: Modify this to display 'description' instead of 'title'
+	$("a.lightbox-image").click(function(event){
+		event.preventDefault();
+		$('<div class="lightbox"><a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><div class="img" style="background: url('+$(this).attr('href').replace(/ /g,"%20")+') center center / contain no-repeat;" title="'+$(this).attr('title')+'" ><img src="'+$(this).attr('href')+'" alt="'+$(this).attr('caption')+'" /></div><span>'+$(this).attr('caption')+'</span></div>').appendTo('body');
+	});
+	//add the vimeo lightbox on click
+	$("body").on("click", "a.lightbox-vimeo", function(event){
+		event.preventDefault();
+		$('<div class="lightbox"><a id="close"></a><a id="next">&rsaquo;</a><a id="prev">&lsaquo;</a><div class="videoWrapperContainer"><div class="videoWrapper"><iframe src="https://player.vimeo.com/video/'+$(this).attr('data-id')+'/?autoplay=1&byline=0&title=0&portrait=0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe></div></div></div>').appendTo('body');
+	});
+
+	// Xuning Version 1: Lightbox gallery WITH all the <a href> under the SAME <div>, no level skipping.
+	// $("body").on("click", "a[class*='lightbox-']", function(){
+	// 	var link_elements = $(this).parent().find("a[class*='lightbox-']");
+	// 	console.log( link_elements )
+	// 	console.log( link_elements.length )
+	// 	$(link_elements).removeClass('current');
+	// 	console.log( $(link_elements[i]) )
+	// 	for (var i=0; i<link_elements.length; i++) {
+	// 		if($(this).attr('href') == $(link_elements[i]).attr('href')) {
+	// 			$(link_elements[i]).addClass('current');
+	//
+	// 		}
+	// 	}
+	// 	if(link_elements.length>1) {
+	// 		$('.lightbox').addClass('gallery');
+	// 		$(link_elements).addClass('gallery');
+	// 	}
+	// });
+
+	// Xuning Version 2: Lightbox gallery WITH an image-specific div, inside a larger image gallery div.
+	$("body").on("click", "a[class*='lightbox-']", function(){
+		var img_elements = $(this).parent().parent().find("a[class*='lightbox-']");
+		var thumb_div_elements = $(img_elements).parent();
+		$(img_elements).removeClass('current');
+
+		for (var i=0; i < thumb_div_elements.length; i++) {
+			if($(this).attr('href') == $(img_elements[i]).attr('href')) {
+				$(img_elements[i]).addClass('current'); // add current to div class gallery-thumbnail-div.
+
+			}
+		}
+		if(thumb_div_elements.length>1) {
+			$('.lightbox').addClass('gallery');
+			$(img_elements).addClass('gallery');
+		}
+	});
+
+
+});
+
+$(document).keydown(function(e) {
+    switch(e.which) {
+        case 37: // left
+        $("#prev").click();
+        break;
+        case 39: // right
+        $("#next").click();
+        break;
+	case 27: // esc
+        $("#close").click();
+        break;
+        default: return; // exit this handler for other keys
+    }
+    e.preventDefault(); // prevent the default action (scroll / move caret)
+});
+
+
+
+  /*===========================
+  Swipe-it v1.4.1
+  An event listener for swiping gestures with vanilla js.
+  https://github.com/tri613/swipe-it#readme
+
+  @Create 2016/09/22
+  @Update 2017/08/11
+  @Author Trina Lu
+  ===========================*/
+
+  "use strict";var _slicedToArray=function(){function n(n,t){var e=[],i=!0,o=!1,r=void 0;try{for(var u,c=n[Symbol.iterator]();!(i=(u=c.next()).done)&&(e.push(u.value),!t||e.length!==t);i=!0);}catch(n){o=!0,r=n}finally{try{!i&&c.return&&c.return()}finally{if(o)throw r}}return e}return function(t,e){if(Array.isArray(t))return t;if(Symbol.iterator in Object(t))return n(t,e);throw new TypeError("Invalid attempt to destructure non-iterable instance")}}();!function(n,t,e){function i(n){function e(){o("touchstart",m,w),o("touchmove",d,w),o("touchend",p,w),E.mouseEvent&&o("mousedown",s,w)}function i(){y=!1,D=!1,A=!1,b=!1,a=!1}function s(n){a=this,y=n.clientX,D=n.clientY,o("mousemove",l,v),o("mouseup",h,v)}function l(n){y&&D&&(A=n.clientX,b=n.clientY)}function h(n){r("mousemove",l,v),r("mouseup",h,v),p(n)}function m(n){a=this,y=n.touches[0].clientX,D=n.touches[0].clientY}function d(n){A=n.touches[0].clientX,b=n.touches[0].clientY}function p(n){if(y&&D&&A&&b){var t=y-A,e=D-b,o=[t,e].map(Math.abs),r=_slicedToArray(o,2),c=r[0],s=r[1],v=E.minDistance;if(c>v){var f=y<A?"swipeRight":"swipeLeft";u(f,a,{distance:t,start:y,end:A})}if(s>v){var l=D>b?"swipeUp":"swipeDown";u(l,a,{distance:e,start:D,end:b})}(c>v||s>v)&&u("swipe",a)}i()}var E=arguments.length>1&&void 0!==arguments[1]?arguments[1]:{},w=c(t.querySelectorAll(n)),y=void 0,D=void 0,A=void 0,b=void 0;E.mouseEvent=void 0===E.mouseEvent?f.mouseEvent:E.mouseEvent,E.minDistance=void 0===E.minDistance?f.minDistance:E.minDistance,i(),e(),this.on=function(n,t){return o(n,t,w),this}}function o(n,t,e){s(e).forEach(function(e){return e.addEventListener(n,t)})}function r(n,t,e){s(e).forEach(function(e){return e.removeEventListener(n,t)})}function u(n,e){var i=arguments.length>2&&void 0!==arguments[2]?arguments[2]:{},o=t.createEvent("Event");o.initEvent(n,!0,!0),o.swipe=i,s(e).forEach(function(n){return n.dispatchEvent(o)})}function c(n){for(var t=[],e=0;e<n.length;e++)t.push(n[e]);return t}function s(n){return Array.isArray(n)?n:[n]}var a=!1,v=[n],f={mouseEvent:!0,minDistance:30};n[e]=i}(window,document,"SwipeIt");
+
+var mySwipeIt = new SwipeIt('body');
+mySwipeIt.on('swipeLeft',function(e){
+	//check if lightbox is present
+	if($('.lightbox').length >  0 ) {
+		$("#next").click();
+	}
+}).on('swipeRight',function(e){
+	//check if lightbox is present
+	if($('.lightbox').length >  0 ) {
+		$("#prev").click();
+	}
+});
+
+</script>
+
+
+
+================================================
+File: _includes/mini-gallery.html
+================================================
+<!-- some code to scrape through the page and find images, then puts it in a nice gallery with thumbnails-->
+
+<!-- TODO: move to sidebar if possible -->
+
+<div class="scrape-gallery">
+
+<!-- first add featured image, if any -->
+{% if page.image %}
+    <div class="gallery-thumbnail-div">
+      <!-- if else statements depending if a caption is given -->
+      {% if page.image-caption %} <a href="/{{ page.image }}" caption= "{{ page.image-caption }}" > {% endif %}
+      {% unless page.image-caption %} <a href="/{{ page.image }}" > {% endunless %}
+        <img class="gallery-thumbnail" src="/{{ page.image }}" />
+      </a>
+    </div>
+{% endif %}
+
+<!-- then scrape the rest of the post for images -->
+{% assign images = page.content | split:"{% include image.html" %}
+{% for image in images %}
+  {% if image contains 'url' %}
+      <!-- extract the URL and the DESCRIPTION fields for lightbox -->
+      {% assign imgdata = image | split:"description=" %}
+      {% assign src = imgdata[0] | split: "url=" | last %}
+      {% assign caption = imgdata[1] | split: "width = " | first %}
+      <div class="gallery-thumbnail-div">
+        <a href={{ src }} caption={{ caption }} >
+        <img class="gallery-thumbnail" src={{ src }} />
+        </a>
+      </div>
+  {% endif %}
+{% endfor %}
+
+
+</div>
+
+
+
+================================================
+File: _includes/navbar.html
+================================================
+<!-- <div class="fixed-topbar"> -->
+<div class="navbar container">
+      <a id="site-title" class="alignable pull-left" href="{{ site.url }}">{{ site.title }}</a>
+      <br/>
+      <p id="site-subtitle" class="alignable pull-left" >{{ site.subtitle }}</p>
+    <ul id="navlist" class="alignable pull-right navbar-ul">
+        {% for x in site.navbar %}
+        <li class="alignable pull-left navbar-list">
+          {% if x.name == "github" %}
+              <a href="{{ x.link }}">{{ x.name }}</a>
+          {% else %}
+              <a href="{{ x.link }}">{{ x.name }}</a>
+          {% endif %}
+          {% if forloop.last == false %} {% endif %}
+        </li>
+        {% endfor %}
+    </ul>
+
+</div>
+<div style="clear:both"></div>
+
+<hr>
+<!-- </div> -->
+
+
+
+================================================
+File: _includes/postbox-nosnippet.html
+================================================
+<!-- begin post -->
+<div class="card-group">
+    <div class="card ">
+        <div class="maxthumb">
+            <a href="{{ site.baseurl }}{{ post.url }}">
+                {% if post.image %}
+
+                    <img class="img-fluid" src="{% if post.image contains "://" %}{{ post.image }}{% else %}{{ site.baseurl }}/{{ post.image }}{% endif %}" alt="{{ post.title }}">
+
+                {% endif %}
+            </a>
+        </div>
+        <div class="card-body">
+            <h2 class="card-title-small">
+                <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
+            </h2>
+            <!-- {% if post.snippet %} -->
+              <!-- <h4 class="card-text">{{ post.snippet }}</h4> -->
+            <!-- {% endif %} -->
+        </div>
+    </div>
+</div>
+
+
+
+================================================
+File: _layouts/default.html
+================================================
+<!DOCTYPE html>
+<html lang="en">
+
+{% include head.html %}
+
+<body>
+    <div class="wrapper">
+        {% include navbar.html %}
+        {% if page.title %}
+        <div class="page-title">
+            {{page.title}}
+        </div>
+        {% endif %}
+        <div class="container">
+            <div class="content">
+                {{ content }}
+            </div>
+            <div class="footer">
+                {% include footer.html %}
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    {% include lightbox.html %}
+    <script type="text/javascript" src="/js/site.js"></script>
+    <script type="text/javascript" src="/js/gif-display.js"></script>
+  </body>
+</html>
+
+
+
+================================================
+File: _layouts/post.html
+================================================
+---
+layout: default
+---
+
+<div class="page-subtitle">
+    {{ page.date | date_to_long_string }}
+    <br>
+    {% for tag in page.tags %}
+        {% if page.tags.first == tag %}
+             [
+        {% endif %}
+        <a href="{{ site.baseurl }}/tags/#{{ tag }}" title="{{ tag }}">{{ tag }}</a>
+        {% if page.tags.last == tag %}
+            ]
+        {% else %}
+            ,
+        {% endif %}
+    {% endfor %}
+</div>
+<br>
+{{content}}
+
+
+
+================================================
+File: _layouts/robot.html
+================================================
+---
+layout: default
+---
+<!-- this stuff will appear after the title, which is fixed. -->
+<div class="page-subtitle">
+    <!-- {{ page.date | date_to_long_string }} -->
+    {% if page.coauthors %}
+    Designed and built in collaboration with: {{ page.coauthors }}
+    {% endif %}
+</div>
+<br>
+<!-- display feature image upfront -->
+{% if page.image %}
+<div class="opening-image">
+  <img class="img-post" src="/{{ page.image }}">
+</div>
+{% endif %}
+
+<!-- TODO: move gallery to the right -->
+
+<!-- add body content -->
+<div class="build">
+{{content}}
+</div>
+
+
+
+================================================
+File: _posts/2023-08-04-sick-child.md
+================================================
+---
+layout: post
+category: notes
+title: The one sick child
+snippet: A thought experiment in anti-natalism.
+tags: [philosophy]
+---
+
+It would have been unimaginable in the past that people would already be able to tell the gender of their children while still being in pregnancy. In a similar sense let us imagine for a moment a future where your family physician would be able to analyze your complete genetic makup and tell you with absolute certainty whether the child(ren) you are about to conceive (before the egg has even been fertilized) would suffer from some terrible affliction or not (e.g. Hallopeau–Siemens syndrome). In this fictional world of ours, the doctor can also tell you the number of children you will conceive (twins, triplets, etc.).
+
+Now imagine you and your spouse are considering to have a baby. You visit the doctor to see if the baby you will eventually birth would be healthy or not. And to your dismay the doctor informs you that the baby would not be healthy.
+
+Now you must decide -- given this piece of information would you have the child or not?
+
+Now imagine another scenario where when you visit the doctor the doctor tells you that you wil be having twins! But unfortunately again, only one of them will be healthy.
+
+Again, would you have the twins or not?
+
+Now imagine a third case where the doctor tells you that you will be having triplets. But again, only two of them would be healthy.
+
+Would you have the triplets?
+
+You might have guessed where this is going. It doesn't matter if people conceive one, three, or a hundred children, the decision of conception doesn't change for most when one of them is guaranteed to be unhealthy.
+
+The people who find themselves saying no in all cases out of empathy for the one sick child may be surprised by the idea that there is virtually no difference between this fantasy world and the real world when amortized over their progeny -- even if one's children are perfectly healthy, the percentage of their progeny that will suffer from horryfying chronic conditions would always be non-zero in the limit.
+
+The question remains -- would you conceive your progeny?
+
+
+
+================================================
+File: _posts/2024-08-04-dsa-templates.md
+================================================
+---
+layout: post
+category: notes
+title: Baisc data structures & algorithms in python
+snippet: Pyhton snippets for popular data structures and algorithms.
+tags: [data structures, algorithms, leetcode]
+---
+- TOC
+{:toc .toc}
+---
+## Data Structures
+
+### Linked List
+
+```python
+class ListNode:
+    def __init__(self, val: int=0, next: Optional[ListNode]=None):
+        self.val = val
+        self.next = next
+
+def nextNode(node : Optional[ListNode]) -> Optional[ListNode]:
+    return node.next if node else None
+
+pre, cur, nxt = None, head, nextNode(head)
+```
+
+
+### Stack
+
+```python
+class Stack:
+    def __init__(self):
+        self.stack = []
+        
+    def push(self, n: str):
+        self.stack += [n]
+    
+    def peek(self) -> str:
+        if self.stack:
+            n = self.stack[-1]
+        else:
+            n = ""
+        return n
+    
+    def pop(self) -> str:
+        n = self.peek()
+        self.stack = self.stack[:-1]
+        return n
+```
+
+Note, this implementation uses `list`, which is a python implementation of a dynamic array. Using a linkedin-list based `deque` would be (slightly) better for memory (`O(2*N)` worst-case vs. `O(N)`) and time (`O(1)` amortized vs. `O(1)`).
+
+```python
+from collections import deque
+
+stack = deque(some_list)    # initializaiton, also accepts maxlen parameter
+val = stack.pop()           # pop val from RIGHT
+stack.extend([val])         # append val to RIGHT
+stack.append(val)           # equivalent to above
+```
+
+
+### Queue
+
+```python
+from collections import deque
+
+queue = deque(some_list)    # initializaiton, also accepts maxlen parameter
+val = queue.popleft()       # pop val from LEFT
+queue.extend([val])         # append val to RIGHT
+queue.append(val)           # equivalent to above
+```
+
+
+### Binary Tree
+
+```python
+class TreeNode:
+    def __init__(
+            self,
+            val: int=0,
+            left: Optional[TreeNode]=None,
+            right: Optional[TreeNode]=None
+        ):
+        self.val = val
+        self.left = left
+        self.right = right
+```
+
+
+### Heap
+
+```python
+# min-heap
+heapq.heappush(arr, val)
+val = heapq.heappop(arr)
+# max-heap
+heapq.heappush(arr, -1 * val)
+val = -1 * heapq.heappop(arr)
+```
+
+
+### Prefix Tree/ Trie
+
+```python
+class TreeNode:
+    def __init__(self, val):
+        self.val = val
+        self.children = {}
+
+END = "*"
+class Trie:
+    def __init__(self):
+        self.root = TreeNode("")
+
+    def insert(self, word: str) -> None:
+        node = self.root
+        for char in word:
+            if char in node.children:
+                node = node.children[char]
+            else:
+                node.children[char] = TreeNode(char)
+                node = node.children[char]
+        
+        if END not in node.children:
+            node.children[END] = TreeNode(END)
+
+    def search(self, word: str) -> bool:
+        node = self.root
+        for char in word:
+            if char in node.children:
+                node = node.children[char]
+            else:
+                return False
+        
+        if END in node.children:
+            return True
+        else:
+            return False
+        
+
+    def startsWith(self, prefix: str) -> bool:
+        node = self.root
+        for char in prefix:
+            if char in node.children:
+                node = node.children[char]
+            else:
+                return False
+        return True
+```
+
+## Algorithms
+
+### Array Search
+
+#### Binary Search
+
+```python
+def binarySearch(number: int, arr: List[int]) -> int:
+    """
+    Time Complexity:    O(log(N))
+    Space Complexity:   O(1)
+    """
+    n = len(arr) - 1
+    left, right = 0, n
+    
+    while left <= right:
+        mid = (left + right)//2
+        
+        if number < arr[mid]:
+            right = mid - 1
+        elif arr[mid] < number:
+            left = mid + 1
+        else:
+            return mid
+        
+    return (left + right)/2.0
+```
+
+
+### Graph Search
+
+#### Breadth First Search
+Using the [number of islands problem](https://leetcode.com/problems/number-of-islands/description/) as an example.
+
+```python
+def numIslands(self, grid: List[List[str]]) -> int:
+        """
+        Time Complexity:    O(N)
+        Space Complexity:   O(N)
+        """
+        M, N = len(grid), len(grid[0])
+        
+        visited = set()
+        # BFS to explore/visit current island
+        def exploreIsland(x, y):
+            queue = deque()
+            queue.append( (x, y) )
+            while queue:                            # until visited all
+                # x, y = queue.pop()                # use for DFS
+                x, y = queue.popleft()
+
+                STEPS = ([
+                    (0, 1),
+                    (1, 0),
+                    (0, -1),
+                    (-1, 0)
+                ])
+                neighbors = [(y + dy, x + dx) for dy, dx in STEPS]
+                for xn, yn in neighbors:
+                    if (0 <= xn < M and             # x_ in range
+                        0 <= yn < N and             # y_ in range
+                        grid[xn][yn] == "1" and     # land coordinate
+                        (xn, yn) not in visited):   # not visited
+
+                        queue.append( (xn, yn) )    # make sure to visit
+                        
+                visited.add( (x, y) )
+            
+            return
+        
+        islands = 0
+        for x in range(M):
+            for y in range(N):
+                if (grid[x][y] == "1" and
+                    (x, y) not in visited):
+                    islands += 1
+                    exploreIsland(x, y)
+                    
+        return islands
+```
+
+#### Deapth First Search
+Use `stack` instead of `queue` (i.e. use `x, y = queue.pop()` instead of `x, y = queue.popleft()`) in BFS.
+
+### Sorting
+
+#### Merge Sort
+
+```python
+def mergeSort(arr: List[int]) -> List[int]:
+    """
+    Time Complexity:    O(N*log(N))
+    Space Complexity:   O(N)
+    """
+    n = len(arr)
+    if n <= 1:
+        return arr
+    else:
+        left_sorted = mergeSort(arr[:n//2])     # sort left
+        right_sorted = mergeSort(arr[n//2:])    # sort right
+        all_sorted = left_sorted+right_sorted   # merge
+        return all_sorted
+```
+
+
+================================================
+File: _posts/2024-08-05-airflow-intro.md
+================================================
+---
+layout: post
+category: notes
+title: Introduction to apache airflow
+snippet: Toy data engineering project with airflow.
+tags: [systems & architecture, data engineering, software design, software development]
+published: false
+---
+
+## TODO
+
+
+================================================
+File: _posts/2024-08-05-antinatalism-intro.md
+================================================
+---
+layout: post
+category: notes
+title: An introduction to anti-natalism
+snippet: An introduction and review of anti-natalism.
+tags: [philosophy]
+published: false
+---
+
+## TODO
+
+
+================================================
+File: _posts/2024-08-05-causal-inference-intro.md
+================================================
+---
+katex: True
+layout: post
+category: notes
+title: Introduction to causal inference
+snippet: An introduction to causality and do-calculus.
+tags: [data science]
+published: false
+---
+- TOC
+{:toc .toc}
+---
+## TODO
+
+### Use KaTeX
+```markdown
+---
+layout: post
+title: KaTeX with Jekyll
+katex: True
+---
+inline: $$f(x) = \int_{-\infty}^\infty \hat f(\xi)\,e^{2 \pi i \xi x} \,d\xi$$
+display mode (centered):
+
+$$f(x) = \int_{-\infty}^\infty \hat f(\xi)\,e^{2 \pi i \xi x} \,d\xi$$
+
+```
+
+And this gives:
+
+
+> inline: $$f(x) = \int_{-\infty}^\infty \hat f(\xi)\,e^{2 \pi i \xi x} \,d\xi$$
+>
+> display mode (centered):
+>
+> $$f(x) = \int_{-\infty}^\infty \hat f(\xi)\,e^{2 \pi i \xi x} \,d\xi$$
+>
+
+Now if you toggle the `katex` property, you can see that the HTML symbols are created, but they will not load in $$\LaTeX$$ font.
+
+### Fast $$\LaTeX$$ to $$\KaTeX$$ commands
+There's a [quick list]( `https://katex.org/docs/supported.html`) and a [complete list](https://katex.org/docs/support_table.html) of supported functions.
+
+Some of the canonical ones:
+- Inline: `$x$` to `$$x$$` with no line spacing before or after (see above).
+- Standalone: `$$f=ma$$` to `$$f=ma$$` with line spacing before and after (see above).
+- Equation labeling: `\label{eq:test}` to `\tag{1}` (manually labeled equations)
+- Haven't figured out how to do bibtex
+
+### Notes
+
+I first transcribe a $$\LaTeX$$ document into github-flavored markdown (GFM) using [pandoc](https://pandoc.org/):
+```bash
+pandoc -f latex -t markdown file.tex
+```
+This is really nice because it actually converts all of my custom macros into just plain latex, which is good enough most of the time.
+However, the above modifications (inline, standalone, any labeling) will need to be made after the transcription in order for it to work with $$\KaTeX$$.
+
+Things to edit after transcribing:
+- Pandoc doesn't transcribe two of `^` in sequence well, but you can fix that manually.
+- Pandoc adds an extra `\` at the end of a paragraph. This needs to be removed.
+- Can remove the `\nonumber` attribute in equations.
+- Equation referencing isn't available, therefore add appropriate `\tag{}` attributes and label them manually.
+
+
+
+================================================
+File: _posts/2024-08-05-convex-optimization-intro.md
+================================================
+---
+katex: True
+layout: post
+category: notes
+title: Introduction to convex optimization
+snippet: An introduction to convex optimization.
+tags: [data science]
+published: false
+---
+- TOC
+{:toc .toc}
+---
+## TODO
+
+### Use KaTeX
+```markdown
+---
+layout: post
+title: KaTeX with Jekyll
+katex: True
+---
+inline: $$f(x) = \int_{-\infty}^\infty \hat f(\xi)\,e^{2 \pi i \xi x} \,d\xi$$
+display mode (centered):
+
+$$f(x) = \int_{-\infty}^\infty \hat f(\xi)\,e^{2 \pi i \xi x} \,d\xi$$
+
+```
+
+And this gives:
+
+
+> inline: $$f(x) = \int_{-\infty}^\infty \hat f(\xi)\,e^{2 \pi i \xi x} \,d\xi$$
+>
+> display mode (centered):
+>
+> $$f(x) = \int_{-\infty}^\infty \hat f(\xi)\,e^{2 \pi i \xi x} \,d\xi$$
+>
+
+Now if you toggle the `katex` property, you can see that the HTML symbols are created, but they will not load in $$\LaTeX$$ font.
+
+### Fast $$\LaTeX$$ to $$\KaTeX$$ commands
+There's a [quick list]( `https://katex.org/docs/supported.html`) and a [complete list](https://katex.org/docs/support_table.html) of supported functions.
+
+Some of the canonical ones:
+- Inline: `$x$` to `$$x$$` with no line spacing before or after (see above).
+- Standalone: `$$f=ma$$` to `$$f=ma$$` with line spacing before and after (see above).
+- Equation labeling: `\label{eq:test}` to `\tag{1}` (manually labeled equations)
+- Haven't figured out how to do bibtex
+
+### Notes
+
+I first transcribe a $$\LaTeX$$ document into github-flavored markdown (GFM) using [pandoc](https://pandoc.org/):
+```bash
+pandoc -f latex -t markdown file.tex
+```
+This is really nice because it actually converts all of my custom macros into just plain latex, which is good enough most of the time.
+However, the above modifications (inline, standalone, any labeling) will need to be made after the transcription in order for it to work with $$\KaTeX$$.
+
+Things to edit after transcribing:
+- Pandoc doesn't transcribe two of `^` in sequence well, but you can fix that manually.
+- Pandoc adds an extra `\` at the end of a paragraph. This needs to be removed.
+- Can remove the `\nonumber` attribute in equations.
+- Equation referencing isn't available, therefore add appropriate `\tag{}` attributes and label them manually.
+
+
+
+================================================
+File: _posts/2024-08-05-docker-compose-intro.md
+================================================
+---
+layout: post
+category: notes
+title: Introduction to docker compose
+snippet: Toy microservices project with docker compose.
+tags: [systems & architecture, software design, software development]
+published: false
+---
+
+## TODO
+
+
+================================================
+File: _posts/2024-08-05-dsa-cheatsheet.md
+================================================
+---
+layout: post
+category: notes
+title: Data structures & algorithms cheat-sheet
+snippet: Cheat-sheet for common data structures/ algorithms concepts.
+tags: [data structures, algorithms, leetcode]
+published: false
+---
+- TOC
+{:toc .toc}
+---
+## TODO
+
+
+================================================
+File: _posts/2024-08-05-dsa-templates-cpp.md
+================================================
+---
+layout: post
+category: notes
+title: Baisc data structures & algorithms in C++
+snippet: C++ snippets for popular data structures and algorithms.
+tags: [data structures, algorithms, leetcode]
+published: false
+---
+- TOC
+{:toc .toc}
+---
+## TODO
+
+
+================================================
+File: _posts/2024-08-05-kubernetes-intro.md
+================================================
+---
+layout: post
+category: notes
+title: Introduction to kubernetes
+snippet: Toy microservices project with kubernetes.
+tags: [systems & architecture, software design, software development]
+published: false
+---
+
+## TODO
+
+
+================================================
+File: _posts/2024-08-05-linear-programming-intro.md
+================================================
+---
+katex: True
+layout: post
+category: notes
+title: Introduction to linear programming
+snippet: An introduction to linear programs and intiger linear programs.
+tags: [data science]
+published: false
+---
+- TOC
+{:toc .toc}
+---
+## TODO
+
+### Use KaTeX
+```markdown
+---
+layout: post
+title: KaTeX with Jekyll
+katex: True
+---
+inline: $$f(x) = \int_{-\infty}^\infty \hat f(\xi)\,e^{2 \pi i \xi x} \,d\xi$$
+display mode (centered):
+
+$$f(x) = \int_{-\infty}^\infty \hat f(\xi)\,e^{2 \pi i \xi x} \,d\xi$$
+
+```
+
+And this gives:
+
+
+> inline: $$f(x) = \int_{-\infty}^\infty \hat f(\xi)\,e^{2 \pi i \xi x} \,d\xi$$
+>
+> display mode (centered):
+>
+> $$f(x) = \int_{-\infty}^\infty \hat f(\xi)\,e^{2 \pi i \xi x} \,d\xi$$
+>
+
+Now if you toggle the `katex` property, you can see that the HTML symbols are created, but they will not load in $$\LaTeX$$ font.
+
+### Fast $$\LaTeX$$ to $$\KaTeX$$ commands
+There's a [quick list]( `https://katex.org/docs/supported.html`) and a [complete list](https://katex.org/docs/support_table.html) of supported functions.
+
+Some of the canonical ones:
+- Inline: `$x$` to `$$x$$` with no line spacing before or after (see above).
+- Standalone: `$$f=ma$$` to `$$f=ma$$` with line spacing before and after (see above).
+- Equation labeling: `\label{eq:test}` to `\tag{1}` (manually labeled equations)
+- Haven't figured out how to do bibtex
+
+### Notes
+
+I first transcribe a $$\LaTeX$$ document into github-flavored markdown (GFM) using [pandoc](https://pandoc.org/):
+```bash
+pandoc -f latex -t markdown file.tex
+```
+This is really nice because it actually converts all of my custom macros into just plain latex, which is good enough most of the time.
+However, the above modifications (inline, standalone, any labeling) will need to be made after the transcription in order for it to work with $$\KaTeX$$.
+
+Things to edit after transcribing:
+- Pandoc doesn't transcribe two of `^` in sequence well, but you can fix that manually.
+- Pandoc adds an extra `\` at the end of a paragraph. This needs to be removed.
+- Can remove the `\nonumber` attribute in equations.
+- Equation referencing isn't available, therefore add appropriate `\tag{}` attributes and label them manually.
+
+
+
+================================================
+File: _posts/2024-08-05-manifold-optimization-intro.md
+================================================
+---
+katex: True
+layout: post
+category: notes
+title: Introduction to manifold optimization
+snippet: An introduction to manifold optimization.
+tags: [data science]
+published: false
+---
+- TOC
+{:toc .toc}
+---
+## TODO
+
+### Use KaTeX
+```markdown
+---
+layout: post
+title: KaTeX with Jekyll
+katex: True
+---
+inline: $$f(x) = \int_{-\infty}^\infty \hat f(\xi)\,e^{2 \pi i \xi x} \,d\xi$$
+display mode (centered):
+
+$$f(x) = \int_{-\infty}^\infty \hat f(\xi)\,e^{2 \pi i \xi x} \,d\xi$$
+
+```
+
+And this gives:
+
+
+> inline: $$f(x) = \int_{-\infty}^\infty \hat f(\xi)\,e^{2 \pi i \xi x} \,d\xi$$
+>
+> display mode (centered):
+>
+> $$f(x) = \int_{-\infty}^\infty \hat f(\xi)\,e^{2 \pi i \xi x} \,d\xi$$
+>
+
+Now if you toggle the `katex` property, you can see that the HTML symbols are created, but they will not load in $$\LaTeX$$ font.
+
+### Fast $$\LaTeX$$ to $$\KaTeX$$ commands
+There's a [quick list]( `https://katex.org/docs/supported.html`) and a [complete list](https://katex.org/docs/support_table.html) of supported functions.
+
+Some of the canonical ones:
+- Inline: `$x$` to `$$x$$` with no line spacing before or after (see above).
+- Standalone: `$$f=ma$$` to `$$f=ma$$` with line spacing before and after (see above).
+- Equation labeling: `\label{eq:test}` to `\tag{1}` (manually labeled equations)
+- Haven't figured out how to do bibtex
+
+### Notes
+
+I first transcribe a $$\LaTeX$$ document into github-flavored markdown (GFM) using [pandoc](https://pandoc.org/):
+```bash
+pandoc -f latex -t markdown file.tex
+```
+This is really nice because it actually converts all of my custom macros into just plain latex, which is good enough most of the time.
+However, the above modifications (inline, standalone, any labeling) will need to be made after the transcription in order for it to work with $$\KaTeX$$.
+
+Things to edit after transcribing:
+- Pandoc doesn't transcribe two of `^` in sequence well, but you can fix that manually.
+- Pandoc adds an extra `\` at the end of a paragraph. This needs to be removed.
+- Can remove the `\nonumber` attribute in equations.
+- Equation referencing isn't available, therefore add appropriate `\tag{}` attributes and label them manually.
+
+
+
+================================================
+File: _posts/2024-08-05-messag-queue-intro.md
+================================================
+---
+layout: post
+category: notes
+title: Introduction to message queues
+snippet: Message queue toy project with RabbitMQ.
+tags: [systems & architecture, software design, software development]
+published: false
+---
+
+## TODO
+
+
+================================================
+File: _posts/2024-08-05-ml-basics.md
+================================================
+---
+katex: True
+layout: post
+category: notes
+title: Machine learning basics
+snippet: Cheat-sheet for machine learning fundamentals.
+tags: [data science]
+published: false
+---
+- TOC
+{:toc .toc}
+---
+## TODO
+
+### Use KaTeX
+```markdown
+---
+layout: post
+title: KaTeX with Jekyll
+katex: True
+---
+inline: $$f(x) = \int_{-\infty}^\infty \hat f(\xi)\,e^{2 \pi i \xi x} \,d\xi$$
+display mode (centered):
+
+$$f(x) = \int_{-\infty}^\infty \hat f(\xi)\,e^{2 \pi i \xi x} \,d\xi$$
+
+```
+
+And this gives:
+
+
+> inline: $$f(x) = \int_{-\infty}^\infty \hat f(\xi)\,e^{2 \pi i \xi x} \,d\xi$$
+>
+> display mode (centered):
+>
+> $$f(x) = \int_{-\infty}^\infty \hat f(\xi)\,e^{2 \pi i \xi x} \,d\xi$$
+>
+
+Now if you toggle the `katex` property, you can see that the HTML symbols are created, but they will not load in $$\LaTeX$$ font.
+
+### Fast $$\LaTeX$$ to $$\KaTeX$$ commands
+There's a [quick list]( `https://katex.org/docs/supported.html`) and a [complete list](https://katex.org/docs/support_table.html) of supported functions.
+
+Some of the canonical ones:
+- Inline: `$x$` to `$$x$$` with no line spacing before or after (see above).
+- Standalone: `$$f=ma$$` to `$$f=ma$$` with line spacing before and after (see above).
+- Equation labeling: `\label{eq:test}` to `\tag{1}` (manually labeled equations)
+- Haven't figured out how to do bibtex
+
+### Notes
+
+I first transcribe a $$\LaTeX$$ document into github-flavored markdown (GFM) using [pandoc](https://pandoc.org/):
+```bash
+pandoc -f latex -t markdown file.tex
+```
+This is really nice because it actually converts all of my custom macros into just plain latex, which is good enough most of the time.
+However, the above modifications (inline, standalone, any labeling) will need to be made after the transcription in order for it to work with $$\KaTeX$$.
+
+Things to edit after transcribing:
+- Pandoc doesn't transcribe two of `^` in sequence well, but you can fix that manually.
+- Pandoc adds an extra `\` at the end of a paragraph. This needs to be removed.
+- Can remove the `\nonumber` attribute in equations.
+- Equation referencing isn't available, therefore add appropriate `\tag{}` attributes and label them manually.
+
+
+
+================================================
+File: _posts/2024-08-05-organising-unittests.md
+================================================
+---
+layout: post
+category: notes
+title: Unittest basics in python
+snippet: Developing and organising unit-tests with the unittest python package.
+tags: [software testing]
+published: false
+---
+
+## TODO
+
+
+================================================
+File: _posts/2024-08-05-python-mocking.md
+================================================
+---
+layout: post
+category: notes
+title: Mocking basics in python
+snippet: Mocking modules and environments for tests.
+tags: [software testing]
+published: false
+---
+
+## TODO
+
+
+================================================
+File: _posts/2024-08-05-reinforcement-learning-intro.md
+================================================
+---
+katex: True
+layout: post
+category: notes
+title: Introduction to reinforcement learning
+snippet: Approximate dynamic programming and reinforcement learning basics.
+tags: [data science]
+published: false
+---
+- TOC
+{:toc .toc}
+---
+## TODO
+
+### Use KaTeX
+```markdown
+---
+layout: post
+title: KaTeX with Jekyll
+katex: True
+---
+inline: $$f(x) = \int_{-\infty}^\infty \hat f(\xi)\,e^{2 \pi i \xi x} \,d\xi$$
+display mode (centered):
+
+$$f(x) = \int_{-\infty}^\infty \hat f(\xi)\,e^{2 \pi i \xi x} \,d\xi$$
+
+```
+
+And this gives:
+
+
+> inline: $$f(x) = \int_{-\infty}^\infty \hat f(\xi)\,e^{2 \pi i \xi x} \,d\xi$$
+>
+> display mode (centered):
+>
+> $$f(x) = \int_{-\infty}^\infty \hat f(\xi)\,e^{2 \pi i \xi x} \,d\xi$$
+>
+
+Now if you toggle the `katex` property, you can see that the HTML symbols are created, but they will not load in $$\LaTeX$$ font.
+
+### Fast $$\LaTeX$$ to $$\KaTeX$$ commands
+There's a [quick list]( `https://katex.org/docs/supported.html`) and a [complete list](https://katex.org/docs/support_table.html) of supported functions.
+
+Some of the canonical ones:
+- Inline: `$x$` to `$$x$$` with no line spacing before or after (see above).
+- Standalone: `$$f=ma$$` to `$$f=ma$$` with line spacing before and after (see above).
+- Equation labeling: `\label{eq:test}` to `\tag{1}` (manually labeled equations)
+- Haven't figured out how to do bibtex
+
+### Notes
+
+I first transcribe a $$\LaTeX$$ document into github-flavored markdown (GFM) using [pandoc](https://pandoc.org/):
+```bash
+pandoc -f latex -t markdown file.tex
+```
+This is really nice because it actually converts all of my custom macros into just plain latex, which is good enough most of the time.
+However, the above modifications (inline, standalone, any labeling) will need to be made after the transcription in order for it to work with $$\KaTeX$$.
+
+Things to edit after transcribing:
+- Pandoc doesn't transcribe two of `^` in sequence well, but you can fix that manually.
+- Pandoc adds an extra `\` at the end of a paragraph. This needs to be removed.
+- Can remove the `\nonumber` attribute in equations.
+- Equation referencing isn't available, therefore add appropriate `\tag{}` attributes and label them manually.
+
+
+
+================================================
+File: _posts/2024-08-05-shell-cheatsheet.md
+================================================
+---
+layout: post
+category: notes
+title: Shell cheat-sheet
+snippet: Cheat-sheet for useful shell/bash commands.
+tags: [software development]
+published: false
+---
+- TOC
+{:toc .toc}
+---
+## TODO
+
+
+================================================
+File: _posts/2024-08-05-sql-cheatsheet.md
+================================================
+---
+layout: post
+category: notes
+title: SQL cheat-sheet
+snippet: Cheat-sheet for useful MySQL commands.
+tags: [data engineering, software development]
+published: false
+---
+- TOC
+{:toc .toc}
+---
+## TODO
+
+
+================================================
+File: _posts/2024-08-05-variational-inference-intro.md
+================================================
+---
+katex: True
+layout: post
+category: notes
+title: Introduction to variational inference
+snippet: An introduction to variational inference.
+tags: [data science]
+published: false
+---
+- TOC
+{:toc .toc}
+---
+## TODO
+
+### Use KaTeX
+```markdown
+---
+layout: post
+title: KaTeX with Jekyll
+katex: True
+---
+inline: $$f(x) = \int_{-\infty}^\infty \hat f(\xi)\,e^{2 \pi i \xi x} \,d\xi$$
+display mode (centered):
+
+$$f(x) = \int_{-\infty}^\infty \hat f(\xi)\,e^{2 \pi i \xi x} \,d\xi$$
+
+```
+
+And this gives:
+
+
+> inline: $$f(x) = \int_{-\infty}^\infty \hat f(\xi)\,e^{2 \pi i \xi x} \,d\xi$$
+>
+> display mode (centered):
+>
+> $$f(x) = \int_{-\infty}^\infty \hat f(\xi)\,e^{2 \pi i \xi x} \,d\xi$$
+>
+
+Now if you toggle the `katex` property, you can see that the HTML symbols are created, but they will not load in $$\LaTeX$$ font.
+
+### Fast $$\LaTeX$$ to $$\KaTeX$$ commands
+There's a [quick list]( `https://katex.org/docs/supported.html`) and a [complete list](https://katex.org/docs/support_table.html) of supported functions.
+
+Some of the canonical ones:
+- Inline: `$x$` to `$$x$$` with no line spacing before or after (see above).
+- Standalone: `$$f=ma$$` to `$$f=ma$$` with line spacing before and after (see above).
+- Equation labeling: `\label{eq:test}` to `\tag{1}` (manually labeled equations)
+- Haven't figured out how to do bibtex
+
+### Notes
+
+I first transcribe a $$\LaTeX$$ document into github-flavored markdown (GFM) using [pandoc](https://pandoc.org/):
+```bash
+pandoc -f latex -t markdown file.tex
+```
+This is really nice because it actually converts all of my custom macros into just plain latex, which is good enough most of the time.
+However, the above modifications (inline, standalone, any labeling) will need to be made after the transcription in order for it to work with $$\KaTeX$$.
+
+Things to edit after transcribing:
+- Pandoc doesn't transcribe two of `^` in sequence well, but you can fix that manually.
+- Pandoc adds an extra `\` at the end of a paragraph. This needs to be removed.
+- Can remove the `\nonumber` attribute in equations.
+- Equation referencing isn't available, therefore add appropriate `\tag{}` attributes and label them manually.
+
+
+
+================================================
+File: _posts/2024-08-11-cpp-fundamentals.md
+================================================
+---
+layout: post
+category: notes
+title: C++ fundamentals
+snippet: Basic concepts in C++
+tags: [data structures, algorithms, leetcode]
+published: false
+---
+- TOC
+{:toc .toc}
+---
+
+## Execution workflow
+
+### Compiler
+
+- Preprocessing statements `#include <iostream>` are 'pre-processed' before compilation.
+- In this case `include` takes header files and pastes them into main file.
+- `main` function returns `0` by default (special case). 
+- for compilation, function declarations (but not definitions) are required.
+- compiler makes an object file (`.obj`) for each `cpp` file.
+
+### Linker
+
+- linker takes multiple `.obj` (or essentially `.cpp`) files and 'links' them together, i.e. uses function definitions where required (before we only had declarations).
+- this gives us a single(?) executable file.
+
+### Make
+
+The `make` command help with building (i.e. compiling and linking) multiple files, e.g.
+
+```bash
+CFLAG = -Wno-implicit-function-declaration
+
+all: main.cpp func.cpp
+    @echo "Compiling+linking files."
+    g++ ${CFLAGS} main.cpp func.cpp -o output
+    @chmod +x output
+
+clean:
+    rm output
+```
+
+Use `make all` followed by `./output` to execute the program.
+
+## Primitive Types
+
+```cpp
+int variable = 8;           // -2b - 2b
+unsigned int uvariable = 8; // 0 - 4b
+
+bool b=true;                // 1 byte
+char a='A';                 // 1 byte
+short s=65;                 // 2 bytes
+int i=65;                   // 4 bytes
+long l=65;                  // 4 bytes
+long long ll=65;            // 8 bytes
+float f=3.14f;              // 4 bytes
+double d=3.14;              // 8 bytes
+```
+
+## Headers
+
+Includes function declarations in `.h` files. Definitions go in `.cpp` files.
+```cpp
+#pragma once            // prevents double declarations
+
+void Func(const char* argument);
+```
+
+Use in `main.cpp`.
+```cpp
+#include "Func.h"       // relative path to main.cpp
+#include <stdlib.h>     // C std lib has a .h extension
+#include <iostream>     // C++ standard lib.
+#include "iostream"     // also works, but <> are only for compiler input path files
+
+int main () {
+    // do something...
+}
+```
+
+## Pointers
+
+```cpp
+int my_var = 8;
+int* my_ptr = &my_var;
+std::cout << printf(my_ptr);    // prints 0xMMMMMMMM
+std::cout << printf(*my_ptr);   // prints 8
+```
+
+alternatively,
+
+```cpp
+int my_var = 8;
+int* my_ptr = nullptr;          // similar to 0 or NULL
+my_ptr = &my_var;
+std::cout << printf(my_ptr);    // prints 0xMMMMMMMM
+std::cout << printf(*my_ptr);   // prints 8
+```
+
+### Type casting for pointers
+
+```cpp
+int my_var = 8;
+double* my_ptr = (double*)&my_var;
+```
+
+### Heap instead of stack
+
+```cpp
+char* buffer = new char[8];
+memset(
+    buffer,         // the pointer
+    0,              // the value to be assigned/set
+    8               // how many bytes
+)
+// do whatever with buffer...
+delete[] buffer;    // de-allocate
+```
+
+### Pass by reference using pointers
+
+```cpp
+
+void Increment(int* number){
+    (*number)++;    // incrementing takes precidence by default
+}
+
+int main(){
+    int number = 8;
+    Increment(&number);
+}
+```
+
+## References
+
+```cpp
+int my_var = 8;
+int& my_ref = my_var;
+```
+
+### Pass by reference
+
+```cpp
+void Increment(int& number){
+    number++;    // incrementing takes precidence by default
+}
+
+int main(){
+    int number = 8;
+    Increment(number);
+}
+```
+
+
+
+================================================
+File: _posts/2024-12-23-orthogonal-linear-representation.md
+================================================
+---
+katex: True
+layout: post
+category: notes
+title: Orthogonal Linear Representation
+snippet: EVD, SVD and their application in PCA, LDA and ICA
+tags: [data science]
+---
+- TOC
+{:toc .toc}
+---
+
+Let's say that we have a bunch of $$d$$-dimensional vectors
+$$\mathbf{x}_i\in\mathbb{R}^d$$, $$i\in \{1, \dots, n\}$$ (throughout this
+text we will assume $$n\ge d$$, i.e. the number of vectors is at least
+equal to the size of the vectors). We can put all of these vectors
+side-by-side in the form of a matrix
+$$\mathbf{X} = [\mathbf{x}_1, \dots, \mathbf{x}_n]\in \mathbb{R}^{d\times n}$$.
+We call this matrix $$\mathbf{X}$$ as the "data matrix," and the vectors
+$$\mathbf{x}_i$$ as "data samples" or just "samples." We represent the
+"labels" with the symbol $$y_i\in \{1, 0\},$$ for $$i\in \{1, \dots, n\}$$.
+Also stacking these together in the form of a vector
+$$\mathbf{y} = [y_1, \dots, y_n]^\top \in\mathbb{R}^n$$, we call this the
+"label vector".
+
+The "dimension" of a vector is the number of elements in it. For
+example, the dimension of all the vectors $$\mathbf{x}_i\in\mathbb{R}^d$$
+in the above section is $$d$$. Sometimes, we might want to reduce the
+dimension of a vector, but still retain the "essence" of the vector. We
+can represent these smaller vectors as $$\mathbf{z}_i\in\mathbb{R}^p$$,
+$$p < d$$. And we call these smaller vectors as "representations/features"
+of $$\mathbf{x}_i$$. We will discuss later how we can get $$\mathbf{z}_i$$
+given some $$\mathbf{x}_i$$ (and maybe also $$y_i$$). The definition of
+"essence" can pretty much be anything, but we will discuss 2 main ideas
+in Sections [4](#pca) and [5](#lda) that correspond to *orthogonal linear representations*.
+
+In the context of *orthogonal linear representations*, we might also be
+interested in a representation that separates out a mixture of signals
+into its 'independent' components. We discuss this Section [6](#ica).
+
+# Eigen Value Decomposition (EVD) {#evd}
+
+For any square matrix $$\mathbf{X}\in\mathbb{R}^{n\times n}$$, we have $$n$$
+"eigenvalues" $$\lambda_i\in\mathbb{R}$$ and corresponding "eigenvectors"
+$$\mathbf{u}_i\in\mathbb{R}^{n}$$. Eigenvalues and eigenvectors are
+special in the sense that for eah pair the following equation holds
+
+<div id="eq:evd1">
+$$
+\mathbf{X}\mathbf{u}_i = \lambda_i\mathbf{u}_i\;. \tag{1}
+$$
+</div>
+
+To get an intuitive understanding of the equation ([1](#eq:evd1)),
+watch [this video](https://www.youtube.com/watch?v=PFDu9oVAE-g). It turns out that
+matrix $$\mathbf{X}$$ can be "decomposed" into the product of (square)
+matrices of its eigenvalues and eigenvectors.
+
+<div id="eq:evd2">
+$$
+\begin{aligned}
+\mathbf{X} &= \begin{bmatrix}
+\mathbf{u}_1 & \dots & \mathbf{u}_n\end{bmatrix}
+\begin{bmatrix}
+\lambda_1& & \\
+& \ddots &\\
+& & \lambda_n
+\end{bmatrix}
+\begin{bmatrix}
+\mathbf{u}_1 & \dots & \mathbf{u}_n\end{bmatrix}^{-1}\\
+&= \mathbf{U} \mathbf{\Lambda} \mathbf{U}^{-1} \tag{2}
+\end{aligned}
+$$
+</div>
+
+This is what we call "Eigen Value Decomposition" (EVD). Note that these
+eigenvalues and eigenvectors in $$\mathbf{\Lambda}$$ and $$\mathbf{U}$$
+don't have any particular order.
+
+# Singular Value Decomposition (SVD) {#svd}
+
+It turns out that any (not necessarily square) matrix
+$$\mathbf{X}\in \mathbb{R}^{d\times n}$$ can be "decomposed" into the
+product of three matrices as
+
+<div id="eq:svd1">
+$$
+\begin{aligned}
+\mathbf{X} &= \overbrace{\begin{bmatrix}
+\mathbf{u}_1 & \dots & \mathbf{u}_d\end{bmatrix}}^{\in\mathbb{R}^{d\times d}}
+\overbrace{\left[
+  \begin{matrix}
+    \sigma_1 &  &  \\
+     & \ddots &  \\
+     &  & \sigma_d \\
+  \end{matrix}
+  \left|
+    \,
+    \begin{matrix}
+        \\
+      \mathbf{0}_{d\times(n-d)}  \\
+        \\
+    \end{matrix}
+  \right.
+\right]}^{\in\mathbb{R}^{d\times n}}
+\overbrace{\begin{bmatrix}
+\mathbf{v}_1 & \dots & \mathbf{v}_n\end{bmatrix}^\top}^{\in\mathbb{R}^{n\times n}} \\
+&= \mathbf{U} \mathbf{\Sigma} \mathbf{V}^\top\;, \tag{3}
+\end{aligned}
+$$
+</div>
+
+where $$\mathbf{U}$$ and $$\mathbf{V}$$ are "orthonormal" matrices, which
+just means that $$\mathbf{U}^\top\mathbf{U} = \mathbf{I}_d$$, or in other
+words $$\mathbf{U}^\top=\mathbf{U}^{-1}$$ and $$\mathbf{\Sigma}$$ is a
+diagonal matrix (not necessarily square). $$\sigma_i$$ are called
+"singular values" and $$\mathbf{u}_i\in\mathbb{R}^d$$ and
+$$\mathbf{v}_i\in\mathbb{R}^n$$ are called left and right "singular
+vectors" respectively. And, interestingly, there is a descending order
+to the singular values in $$\mathbf{\Sigma}$$ and they are also all
+non-negative, i.e. $$\sigma_1 \ge \dots \ge \sigma_d \ge 0$$.
+
+## SVD vs. EVD {#svdVsEvd}
+
+There is a very close relationship between EVD and SVD. This can be seen
+by substituting the SVD of $$\mathbf{X}$$ from
+([3](#eq:svd1)) in
+$$\mathbf{X}\mathbf{X}^\top$$ and $$\mathbf{X}^\top\mathbf{X}$$.
+
+<div id="eq:svdVsEvd1">
+$$
+\begin{aligned}
+\mathbf{X}\mathbf{X}^\top &= \big(\mathbf{U} \mathbf{\Sigma} \mathbf{V}^\top\big) \big(\mathbf{U} \mathbf{\Sigma} \mathbf{V}^\top\big)^\top \\ 
+ &= \big(\mathbf{U} \mathbf{\Sigma} \mathbf{V}^\top\big)\big(\mathbf{V} \mathbf{\Sigma} \mathbf{U}^\top\big) \\
+  &= \mathbf{U} \mathbf{\Sigma} \mathbf{V}^\top \mathbf{V} \mathbf{\Sigma} \mathbf{U}^\top \\
+    &= \mathbf{U} \mathbf{\Sigma} \mathbf{I}_n \mathbf{\Sigma} \mathbf{U}^\top \\
+  &= \mathbf{U} \mathbf{\Sigma} \mathbf{\Sigma} \mathbf{U}^\top \\
+  &= \mathbf{U} \mathbf{\Sigma}^2 \mathbf{U}^\top \\
+  &= \mathbf{U} \mathbf{\Sigma}^2 \mathbf{U}^{-1} \tag{4}
+\end{aligned}
+$$
+</div>
+
+Here, we have used the fact that
+$$(\mathbf{A}\mathbf{B})^\top = \mathbf{B}^\top\mathbf{A}^\top$$.
+Equations ([4](#eq:svdVsEvd1)) and
+([2](#eq:evd2)) are similar. Therefore, $$\mathbf{U}$$ is the matrix of eigenvectors of
+$$\mathbf{X}\mathbf{X}^\top$$ and, similarly, $$\mathbf{V}$$ is the matrix
+of eigenvectors of $$\mathbf{X}^\top\mathbf{X}$$. In each case,
+$$\mathbf{\Sigma}^2$$ is the eigenvalue matrix.
+
+# Principal Component Analysis (PCA) {#pca}
+
+Principal Component Analysis (PCA) is a special (and arguably the most
+famous) dimensionality reduction technique. Let's first go over the
+steps of PCA and we shall discuss the intuition and motivation behind it
+shortly after.
+
+Given a data matrix
+$$\mathbf{X} = [\mathbf{x}_1, \dots, \mathbf{x}_n]\in \mathbb{R}^{d\times n}$$,
+we wish to reduce the dimension of the data from $$d$$ to $$k<d$$ to get
+smaller versions $$\mathbf{z}_i$$ of each sample $$\mathbf{x}_i$$. We carry
+out the following steps to get the so called "principal components\" and
+"score matrix\" of the data.
+
+1.  Calculate the "mean\" of the data
+
+    $$
+    \boldsymbol{\mu} = \frac{1}{n}\sum_{i=1}^n\mathbf{x}_i = \frac{1}{n}\mathbf{X}\mathbf{1}_n\;.
+    $$
+
+2.  Calculate the "centered\" data matrix[^1]
+
+    $$
+    \begin{aligned}
+    \bar{\mathbf{X}} &= \mathbf{X} - \boldsymbol{\mu}\otimes\mathbf{1}_n^\top\\
+    &=\begin{bmatrix}
+    (\mathbf{x}_1 - \boldsymbol{\mu})& \dots & (\mathbf{x}_n - \boldsymbol{\mu})\end{bmatrix}\\
+    &=\begin{bmatrix}
+    {\bar{\mathbf{x}}}_1 & \dots & {\bar{\mathbf{x}}}_n\end{bmatrix}\in\mathbb{R}^{d\times n}\;.
+    \end{aligned}
+    $$
+    
+    Beyond this point, it would be better for the reader
+    to consider $$\mathbf{X}$$ and $$\bar{\mathbf{X}}$$ as essentially the
+    same for ease of understanding.
+
+3.  Perform the SVD on
+    $$\bar{\mathbf{X}} = \mathbf{U} \mathbf{\Sigma} \mathbf{V}^\top$$.
+
+4.  Throw away all but the first $$k$$ "singular vectors" (columns) from
+    $$\mathbf{U}=\begin{bmatrix}
+    \mathbf{u}_1 & \dots & \mathbf{u}_d\end{bmatrix}$$ to get a smaller
+    matrix $$\mathbf{U}_k=\begin{bmatrix}
+    \mathbf{u}_1 & \dots & \mathbf{u}_k\end{bmatrix}\in\mathbb{R}^{d\times k}$$.
+    This matrix is called the matrix of $$k$$ "principal components" of
+    $$\mathbf{X}$$.
+
+5.  The matrix
+    $$\mathbf{Z}=\mathbf{U}_k^\top\bar{\mathbf{X}}=\begin{bmatrix}
+    \mathbf{z}_1 & \dots & \mathbf{z}_n\end{bmatrix}\in\mathbb{R}^{k\times n}$$
+    is called the "score matrix" of $$\mathbf{X}$$, where each "score
+    vector" $$\mathbf{z}_i\in\mathbb{R}^{k}$$ is a low-dimensional version
+    of the corresponding data sample $$\mathbf{x}_i\in\mathbb{R}^{d}$$.
+
+One interesting thing to note here is that given $$\mathbf{Z}$$ and
+$$\mathbf{U}_k$$ that were obtained from PCA, we can "reconstruct" an
+"approximate" version of the original (centered) data matrix
+$$\bar{\mathbf{X}}$$ as
+$$\widehat{\bar{\mathbf{X}}} = \mathbf{U}_k\mathbf{Z} = \mathbf{U}_k\mathbf{U}_k^\top\bar{\mathbf{X}}=\begin{bmatrix}
+\widehat{\bar{\mathbf{x}}}_1 & \dots & \widehat{\bar{\mathbf{x}}}_n\end{bmatrix}\in\mathbb{R}^{d\times n}$$.
+These "approximations" $$\widehat{\bar{\mathbf{x}}}_i$$ of samples
+$${\bar{\mathbf{x}}}_i$$ are also called the "projections" of
+$${\bar{\mathbf{x}}}_i$$ onto the "space spanned by the principal
+components." For a new, previously unseen sample
+$$\mathbf{x}_\text{new}$$, we perform only steps 2 and 5 to get
+$$\mathbf{z}_\text{new}$$.
+
+Now that we have discussed the precise steps of PCA, we can discuss the
+intuition behind it.
+
+## Minimum residual view of PCA
+
+Imagine we have the (centered) data samples in $$\mathbb{R}^d$$ (e.g.,
+$$d=2$$). Our goal is to find a different version of this data that
+instead lies in $$\mathbb{R}^k$$, which is a lower-dimensional space for
+$$k<d$$ (e.g., $$k=1$$). Then, PCA can be thought of as "finding" this
+low-dimensional "linear"[^2] space such that, on average, the difference
+(also called "residual") between any sample $$\bar{\mathbf{x}}_i$$ and its
+projection $$\widehat{\bar{\mathbf{x}}}_i$$ onto the low-dimensional space
+is as small as possible. The unit vectors (also called "basis vectors"
+or just "basis") of this low-dimensional space are precisely the
+principal components $$\mathbf{u}_i$$ (therefore there are $$k$$ unit
+vectors for a $$k$$-dimensional space).
+
+## Maximum variance view of PCA
+
+The principal components of the data are vectors along the maximum
+variance directions of the data. The first principal component lies
+along the direction of highest variance. The second principal component
+lies along the direction of second highest variance, and so on. The
+score vectors $$\mathbf{z}_i$$ are then the "projections"[^3]
+$$\widehat{\bar{\mathbf{x}}}_i$$ of the original (centered) samples
+$$\bar{\mathbf{x}}_i$$ onto a linear-subsapce with unit-vectors
+$${\mathbf{u}}_j$$, but viewed in the sup-sapce instead of the original
+space.
+
+# Linear Discriminant Analysis (LDA) {#lda}
+
+Linear Discriminant Analysis (LDA) is a dimensionality reduction
+technique that utilizes class labels to find directions that maximize
+the separability between classes. Given the data matrix
+$$\mathbf{X} = [\mathbf{x}_1, \dots, \mathbf{x}_n] \in \mathbb{R}^{d \times n}$$
+and the label vector
+$$\mathbf{y} = [y_1, \dots, y_n]^\top \in \{0, 1\}^n$$, LDA aims to
+project the data into a lower-dimensional space such that the projected
+samples $$\mathbf{z}_i \in \mathbb{R}^k$$ (with $$k < d$$) maximize the
+class separability.
+
+The steps to perform LDA are as follows:
+
+1.  Compute the mean vector of the entire dataset:
+
+    $$
+    \boldsymbol{\mu} = \frac{1}{n} \sum_{i=1}^n \mathbf{x}_i = \frac{1}{n} \mathbf{X} \mathbf{1}_n \in \mathbb{R}^d\;.
+    $$
+
+2.  Compute the mean vector for each class $$c \in \{0, 1\}$$:
+    
+    $$
+    \boldsymbol{\mu}_c = \frac{1}{n_c} \sum_{i \in \mathcal{C}_c} \mathbf{x}_i = \frac{1}{n_c} \mathbf{X}_c \mathbf{1}_{n_c} \in \mathbb{R}^d\;,
+    $$
+    
+    where $$\mathcal{C}_c = \{i : y_i = c\}$$,
+    $$\mathbf{X}_c \in \mathbb{R}^{d \times n_c}$$ contains the samples
+    from class $$c$$, and $$n_c = |\mathcal{C}_c|$$ is the number of samples
+    in class $$c$$.
+
+3.  Compute the within-class scatter matrix:
+
+    $$
+    \begin{aligned}
+    \mathbf{S}_\text{W} &= \sum_{c=0}^1 \sum_{i \in \mathcal{C}_c} (\mathbf{x}_i - \boldsymbol{\mu}_c)(\mathbf{x}_i - \boldsymbol{\mu}_c)^\top\\
+    &= \sum_{c=0}^1 (\mathbf{X}_c - \boldsymbol{\mu}_c \otimes \mathbf{1}_{n_c}^\top)(\mathbf{X}_c - \boldsymbol{\mu}_c \otimes \mathbf{1}_{n_c}^\top)^\top \in \mathbb{R}^{d \times d}\;.
+    \end{aligned}
+    $$
+
+4.  Compute the between-class scatter matrix:
+    
+    $$
+    \mathbf{S}_\text{B} = \sum_{c=0}^1 n_c (\boldsymbol{\mu}_c - \boldsymbol{\mu})(\boldsymbol{\mu}_c - \boldsymbol{\mu})^\top \in \mathbb{R}^{d \times d}\;.
+    $$
+
+5.  Solve the generalized eigenvalue problem:
+
+    $$
+    \mathbf{S}_\text{W}^{-1} \mathbf{S}_\text{B} \mathbf{w}_i = \lambda_i \mathbf{w}_i\;,
+    $$
+    
+    where $$\mathbf{w}_i \in \mathbb{R}^d$$ are the
+    eigenvectors and $$\lambda_i \in \mathbb{R}$$ are the eigenvalues.
+    Sort the eigenvectors by decreasing eigenvalue magnitude.
+
+6.  Select the top $$k$$ eigenvectors $$\mathbf{w}_1, \dots, \mathbf{w}_k$$
+    to form the projection matrix
+    $$\mathbf{W} = \begin{bmatrix} \mathbf{w}_1 & \dots & \mathbf{w}_k \end{bmatrix} \in \mathbb{R}^{d \times k}$$.
+
+7.  Project the data into the lower-dimensional space:
+
+    $$
+    \mathbf{Z} = \mathbf{W}^\top \mathbf{X} \in \mathbb{R}^{k \times n}\;.
+    $$
+
+LDA ensures that the projected data $$\mathbf{Z}$$ maximizes the ratio of
+between-class variance to within-class variance in the lower-dimensional
+space.
+
+# Independent Component Analysis (ICA) {#ica}
+
+Independent Component Analysis (ICA) is a dimensionality reduction
+technique aimed at finding a representation of the data where the
+components are statistically independent. Unlike PCA or LDA, ICA does
+not rely on variance or class labels but instead focuses on higher-order
+statistical independence.
+
+Given the data matrix
+$$\mathbf{X} = [\mathbf{x}_1, \dots, \mathbf{x}_n] \in \mathbb{R}^{d \times n}$$,
+ICA assumes that $$\mathbf{X}$$ is a linear mixture of independent
+components. This means:
+
+$$
+\mathbf{X} = \mathbf{A} \mathbf{S}\;,
+$$
+
+where $$\mathbf{A} \in \mathbb{R}^{d \times d}$$ is the
+mixing matrix, and
+$$\mathbf{S} = [\mathbf{s}_1, \dots, \mathbf{s}_n] \in \mathbb{R}^{d \times n}$$
+contains the independent components $$\mathbf{s}_i \in \mathbb{R}^d$$. The
+goal of ICA is to find an unmixing matrix
+$$\mathbf{W} \in \mathbb{R}^{d \times d}$$ such that:
+
+$$
+\mathbf{S} = \mathbf{W} \mathbf{X}\;,
+$$
+
+where the rows of $$\mathbf{S}$$ are as statistically independent as possible.
+
+The steps to perform ICA are as follows:
+
+1.  Center the data matrix $$\mathbf{X}$$ by subtracting the mean vector
+    $$\boldsymbol{\mu} = \frac{1}{n} \mathbf{X} \mathbf{1}_n$$:
+    
+    $$
+    \bar{\mathbf{X}} = \mathbf{X} - \boldsymbol{\mu} \otimes \mathbf{1}_n^\top\;.
+    $$
+
+2.  Whiten the data matrix $$\bar{\mathbf{X}}$$ to remove correlations
+    between features:
+    
+    $$
+    \mathbf{X}_\text{white} = \mathbf{D}^{-\frac{1}{2}} \mathbf{E}^\top \bar{\mathbf{X}}\;,
+    $$
+    
+    where $$\mathbf{D}$$ and $$\mathbf{E}$$ are obtained
+    from the eigenvalue decomposition
+    $$\mathbf{C} = \bar{\mathbf{X}} \bar{\mathbf{X}}^\top = \mathbf{E} \mathbf{D} \mathbf{E}^\top$$.
+
+3.  Use an iterative algorithm (e.g., FastICA) to estimate the unmixing
+    matrix $$\mathbf{W}$$ such that the components of
+    $$\mathbf{S} = \mathbf{W} \mathbf{X}_\text{white}$$ are statistically
+    independent (not within the scope of this text!).
+
+4.  The independent components are given by:
+
+    $$
+    \mathbf{S} = \mathbf{W} \mathbf{X}\;.
+    $$
+
+ICA is commonly used in applications such as blind source separation,
+where the goal is to recover original signals from mixed observations
+(e.g., separating audio sources recorded by multiple microphones).
+
+[^1]: The "Kronecker product" of matrices $$\mathbf{A} = \begin{bmatrix}
+    a_{1, 1}& a_{1, 2} \\
+    a_{2, 1} & a_{2, 2}
+    \end{bmatrix}$$ and $$\mathbf{B} = \begin{bmatrix}
+    b_{1, 1}& b_{1, 2} \\
+    b_{2, 1} & b_{2, 2}
+    \end{bmatrix}$$ is defined as
+    $$\mathbf{A}\otimes\mathbf{B} := \begin{bmatrix}
+    a_{1, 1}\mathbf{B}& a_{1, 2}\mathbf{B} \\
+    a_{2, 1}\mathbf{B} & a_{2, 2}\mathbf{B}
+    \end{bmatrix}$$.
+
+[^2]: A linear space means just what it sounds like --- something that
+    looks like a line. For example, a line drawn on a piece of paper is
+    a $$1$$-dimensional linear "sub-space" that lies in a higher
+    $$2$$-dimensional space, the paper.
+
+[^3]: the orthogonal projection of some $$\mathbf{a}$$ onto a "linear
+    sub-space" is basically the closest point $$\hat{\mathbf{a}}$$ to
+    $${\mathbf{a}}$$ that lies on that linear sub-space
+
+
+
+
+
+
+================================================
+File: bibtex/icra20.txt
+================================================
+
+@inproceedings{icra2020,
+author       = {A. Savkin and T. Lapotre and K. Strauss and U. Akbar and F. Tombari},
+title        = {Adversarial Appearance Learning in Augmented Cityscapes for Pedestrian Recognition in Autonomous Driving},
+booktitle    = {IEEE International Conference on Robotics and Automation (ICRA)},
+year         = {2020}
+}
+
+
+================================================
+File: bibtex/iwcmc17.txt
+================================================
+@article{iwcmc2017,
+  title={Performance Analysis of Decoupled Cell Association in Multi-Tier Hybrid Networks using Real Blockage Environments},
+  author={O. W. Bhatti, H. Suhail, U. Akbar, S. A. Hassan, H. Pervaiz, L. Musavian and Q. Ni},
+  journal={International Wireless Communications and Mobile Computing Conference (IWCMC)},
+  year={2017}
+}
+
+
+================================================
+File: bibtex/msc-thesis.txt
+================================================
+BibTeX
+@mscthesis{uzair2021,
+author = {Uzair Akbar},
+title = {On Constructing Instrumental Variables with Data Augmentation},
+year = {2021},
+month = {June},
+school = {Technical University of Munich}
+}
+
+
+
+================================================
+File: bibtex/neurips25.txt
+================================================
+@inproceedings{akbar2025analysis,
+  title     = {An Analysis of Causal Effect Estimation using Outcome Invariant Data Augmentation},
+  author    = {Uzair Akbar and Niki Kilbertus and Hao Shen and Krikamol Muandet and Bo Dai},
+  booktitle = {Advances in Neural Information Processing Systems 38 (NeurIPS 2025)},
+  year      = {2025}
+}
+
+
+
+================================================
+File: css/github.css
+================================================
+.highlight .hll { background-color: #ffffcc }
+.highlight .c { color: #999988; font-style: italic } /* Comment */
+.highlight .err { color: #a61717; background-color: #e3d2d2 } /* Error */
+.highlight .k { color: #000000; font-weight: bold } /* Keyword */
+.highlight .o { color: #000000; font-weight: bold } /* Operator */
+.highlight .cm { color: #999988; font-style: italic } /* Comment.Multiline */
+.highlight .cp { color: #999999; font-weight: bold; font-style: italic } /* Comment.Preproc */
+.highlight .c1 { color: #999988; font-style: italic } /* Comment.Single */
+.highlight .cs { color: #999999; font-weight: bold; font-style: italic } /* Comment.Special */
+.highlight .gd { color: #000000; background-color: #ffdddd } /* Generic.Deleted */
+.highlight .ge { color: #000000; font-style: italic } /* Generic.Emph */
+.highlight .gr { color: #aa0000 } /* Generic.Error */
+.highlight .gh { color: #999999 } /* Generic.Heading */
+.highlight .gi { color: #000000; background-color: #ddffdd } /* Generic.Inserted */
+.highlight .go { color: #888888 } /* Generic.Output */
+.highlight .gp { color: #555555 } /* Generic.Prompt */
+.highlight .gs { font-weight: bold } /* Generic.Strong */
+.highlight .gu { color: #aaaaaa } /* Generic.Subheading */
+.highlight .gt { color: #aa0000 } /* Generic.Traceback */
+.highlight .kc { color: #000000; font-weight: bold } /* Keyword.Constant */
+.highlight .kd { color: #000000; font-weight: bold } /* Keyword.Declaration */
+.highlight .kn { color: #000000; font-weight: bold } /* Keyword.Namespace */
+.highlight .kp { color: #000000; font-weight: bold } /* Keyword.Pseudo */
+.highlight .kr { color: #000000; font-weight: bold } /* Keyword.Reserved */
+.highlight .kt { color: #445588; font-weight: bold } /* Keyword.Type */
+.highlight .m { color: #009999 } /* Literal.Number */
+.highlight .s { color: #d01040 } /* Literal.String */
+.highlight .na { color: #008080 } /* Name.Attribute */
+.highlight .nb { color: #0086B3 } /* Name.Builtin */
+.highlight .nc { color: #445588; font-weight: bold } /* Name.Class */
+.highlight .no { color: #008080 } /* Name.Constant */
+.highlight .nd { color: #3c5d5d; font-weight: bold } /* Name.Decorator */
+.highlight .ni { color: #800080 } /* Name.Entity */
+.highlight .ne { color: #990000; font-weight: bold } /* Name.Exception */
+.highlight .nf { color: #990000; font-weight: bold } /* Name.Function */
+.highlight .nl { color: #990000; font-weight: bold } /* Name.Label */
+.highlight .nn { color: #555555 } /* Name.Namespace */
+.highlight .nt { color: #000080 } /* Name.Tag */
+.highlight .nv { color: #008080 } /* Name.Variable */
+.highlight .ow { color: #000000; font-weight: bold } /* Operator.Word */
+.highlight .w { color: #bbbbbb } /* Text.Whitespace */
+.highlight .mf { color: #009999 } /* Literal.Number.Float */
+.highlight .mh { color: #009999 } /* Literal.Number.Hex */
+.highlight .mi { color: #009999 } /* Literal.Number.Integer */
+.highlight .mo { color: #009999 } /* Literal.Number.Oct */
+.highlight .sb { color: #d01040 } /* Literal.String.Backtick */
+.highlight .sc { color: #d01040 } /* Literal.String.Char */
+.highlight .sd { color: #d01040 } /* Literal.String.Doc */
+.highlight .s2 { color: #d01040 } /* Literal.String.Double */
+.highlight .se { color: #d01040 } /* Literal.String.Escape */
+.highlight .sh { color: #d01040 } /* Literal.String.Heredoc */
+.highlight .si { color: #d01040 } /* Literal.String.Interpol */
+.highlight .sx { color: #d01040 } /* Literal.String.Other */
+.highlight .sr { color: #009926 } /* Literal.String.Regex */
+.highlight .s1 { color: #d01040 } /* Literal.String.Single */
+.highlight .ss { color: #990073 } /* Literal.String.Symbol */
+.highlight .bp { color: #999999 } /* Name.Builtin.Pseudo */
+.highlight .vc { color: #008080 } /* Name.Variable.Class */
+.highlight .vg { color: #008080 } /* Name.Variable.Global */
+.highlight .vi { color: #008080 } /* Name.Variable.Instance */
+.highlight .il { color: #009999 } /* Literal.Number.Integer.Long */
+
+
+
+================================================
+File: css/main.scss
+================================================
+---
+---
+
+// Customization Variables
+
+$accent: #0eb077;
+$accentlight: rgba(14, 176, 119, 0.3);
+
+$inlinecodetext: #0a8f64;
+$inlinecodeborder: #CFE3DD;
+$inlinecodebg: #e9f2ef;
+// $codeblocktext: #464646;
+// $codeblockborder: #e5e5e5;
+// $codeblockbg: #f8f8f8;
+$codeblocktext: #0a8f64;
+$codeblockborder: #CFE3DD;
+$codeblockbg: #e9f2ef;
+
+$image-size: 150px;
+
+$max-width: 740px;
+$med-width: 600px;
+$small-width: 480px;
+
+// Basic
+
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+body {
+    margin: 0;
+    font-family: "Source Sans Pro", "Inconsolata", sans-serif;
+    height: 100%;
+    line-height: 0.7em;
+    font-weight: 300;
+    letter-spacing: 300;
+    text-shadow: 0 0 1px rgba(58,57,57,0.25);
+}
+a {
+    text-decoration: none;
+    color: $accent;
+
+}
+a:hover {
+    text-decoration: none;
+    color: $accentlight;
+    text-shadow: 0 0 1px rgba(30, 138, 100,0.3);
+}
+hr {
+    border: none;
+    margin: 5px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+h3 {
+  padding:1em 0 0 0;
+  line-height: 0em;
+}
+
+h4 {
+  padding:1em 0 0 0;
+  line-height: 0em;
+}
+
+code {
+    background-color: $inlinecodebg;
+    color: $inlinecodetext;
+    padding:1px 2px;
+    border-radius:2px;
+    border:1px solid $inlinecodeborder;
+    overflow-x: auto;
+    font-size: small;
+    font-family: "dejavu sans mono", "Ubuntu Mono", "Inconsolata", monospace;
+    font-style: normal;
+}
+
+pre code {
+  background-color: $codeblockbg;
+  color: $codeblocktext;
+  padding: none;
+  border-radius: none;
+  border: none;
+  font-size: small;
+  font-family: "dejavu sans mono", "Ubuntu Mono", "Inconsolata", monospace;
+  font-style: normal;
+}
+
+pre {
+    padding:8px 15px;
+    background: $codeblockbg;
+    border-radius:5px;
+    border:1px solid $codeblockborder;
+    overflow-x: auto;
+    font-family: "dejavu sans mono", "Ubuntu Mono", "Inconsolata", monospace;
+    font-style: normal;
+    line-height: 1.15;
+}
+
+.filename{
+  font-family: "dejavu sans mono", "Ubuntu Mono", "Inconsolata", monospace;
+  font-style: normal;
+  background-color: $codeblockborder;
+  color: $codeblocktext;
+  padding:3px 3px;
+  border-radius:5px 5px 0 0;
+  overflow-x: auto;
+  font-size: small;
+  margin-bottom: -23px;
+  padding-left: 1em;
+  padding-bottom: 7px;
+}
+
+.highlight {
+    // background-color:  $codebg;
+    // padding:8px 15px;
+    // background: #f8f8f8;
+    // border-radius:5px;
+    // border:1px solid #e5e5e5;
+    // overflow-x: auto;
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported bty Chrome, Edge, Opera and Firefox */
+}
+
+// divs
+
+.gif-link {
+  cursor: pointer;
+}
+
+.gif {
+    display: none;
+    opacity: 1;
+    max-height: 150px;
+    width: auto;
+    z-index: 1000;
+    border-style: 2px solid black;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+
+.alignable {
+    display: inline-block;
+}
+.pull-left {
+    @extend .alignable;
+    float: left;
+}
+.pull-right {
+    @extend .alignable;
+    float: right;
+}
+.container {
+    max-width: $max-width;
+    margin: auto;
+}
+.wrapper {
+    min-height: 100%;
+}
+.absolute-left{
+  @extend .alignable;
+  text-align: left;
+}
+
+
+// Navbar
+
+#site-title {
+    font-size: 25px;
+    color: #272727;
+    text-shadow: 0 0 3px rgba(58,57,57,0.25);
+    display: inline-block;
+    padding: 0px 0px 0px 0px;
+    margin: 0px
+}
+.navbar {
+    padding: 50px 0 30px 0;
+}
+.navbar-ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0px 0 0px 0;
+    margin-left: 20px;
+}
+.navbar-list {
+    list-style-type: none;
+    margin: 0 5px 0 10px;
+}
+.socials-ul {
+    display: inline-block;
+    margin: 0;
+    padding: 0px 0 0px 0;
+    margin-right: 20px;
+}
+.socials-list {
+    list-style-type: none;
+    margin: 0 10px 0 5px;
+}
+
+#site-subtitle {
+    font-size: 15px;
+    color: #272727;
+    text-shadow: 0 0 3px rgba(58,57,57,0.25);
+    padding: 5px 0px 0px 0px;
+    margin-top: 10px;
+}
+#copyright {
+    margin-top: 4px !important;
+    margin-bottom: 4px !important;
+}
+
+// index
+
+.post-title{
+    max-width: 500px;
+    color: #272727;
+    display: inline-block;
+    font-size: 25px;
+    line-height: 1.2;
+    margin-top: 10px // this must match the one in .post-details
+}
+.post-details{
+    @extend .pull-right;
+    text-align: right;
+    margin-left: 20px;
+    margin-top: 10px
+}
+.post-snippet{
+    max-width: 500px;
+    margin-top:10px
+}
+
+.katex { font-size: 1em !important; }
+
+// pages
+
+.page-title{
+    text-align: center;
+    font-size: xx-large;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    line-height: 1.2;
+}
+.page-subtitle{
+    text-align: center;
+}
+
+// footer
+
+.footer{
+    text-align: center;
+    font-size: small;
+}
+
+// videos
+
+// from: https://flipdazed.github.io/blog/website/add-video-to-github-README
+// Adds support for a video holder
+// as per http://webdesignerwall.com/tutorials/css-elastic-videos
+
+.video {
+position : relative;
+display : block;
+width : 60%;
+min-width : 200px;
+margin : auto;
+height : auto;
+}
+.flex-video {
+position : relative;
+padding-bottom : 67.5%;
+height : 0;
+overflow : hidden;
+}
+.flex-video iframe, .flex-video object, .flex-video embed {
+position : absolute;
+top : 0;
+left : 0;
+width : 100%;
+height : 100%;
+}
+
+// boxes
+.tip {
+    padding: 12px 24px 12px 30px;
+    margin: 2em 0;
+    border-left: 4px solid $accent;
+    background-color: #f8f8f8;
+    position: relative;
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+    box-sizing: border-box;
+
+    &:before {
+        position: absolute;
+        top: 14px;
+        left: -12px;
+        background-color: $accent;
+        color: #fff;
+        content: "!";
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        text-align: center;
+        line-height: 20px;
+        font-weight: bold;
+        font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+        font-size: 14px;
+    }
+}
+
+.warning {
+    padding: 12px 24px 12px 30px;
+    margin: 2em 0;
+    border-left: 4px solid #FFB90F;
+    background-color: #f8f8f8;
+    position: relative;
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+    box-sizing: border-box;
+
+    &:before {
+        position: absolute;
+        top: 14px;
+        left: -12px;
+        background-color: #FFB90F;
+        color: #fff;
+        content: "!";
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        text-align: center;
+        line-height: 20px;
+        font-weight: bold;
+        font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+        font-size: 14px;
+    }
+}
+
+.danger {
+    padding: 12px 24px 12px 30px;
+    margin: 2em 0;
+    border-left: 4px solid #FF6A6A;
+    background-color: #f8f8f8;
+    position: relative;
+    border-bottom-right-radius: 2px;
+    border-top-right-radius: 2px;
+    box-sizing: border-box;
+    color:  #FF6A6A;
+
+    &:before {
+        position: absolute;
+        top: 14px;
+        left: -12px;
+        background-color: #FF6A6A;
+        color: #fff;
+        content: "!!";
+        width: 20px;
+        height: 20px;
+        border-radius: 100%;
+        text-align: center;
+        line-height: 20px;
+        font-weight: bold;
+        font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+        font-size: 14px;
+    }
+}
+
+
+// card notes
+.rowofposts {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+   grid-gap: 10px;
+   margin: 0px;
+}
+
+.card-group {
+  grid-column: span 4;
+  margin: 5px 5px 5px 5px;
+}
+
+@media (min-width: 992px) {
+    .row {
+        width: 970px;
+     }
+}
+
+.card {
+    // border: 1px solid rgba(0, 0, 0, .125);
+    // border-radius: .25rem;
+    // transition: all 0.3s cubic-bezier(.25, .8, .25, 1);
+}
+
+.card .wrapthumbnail {
+    height: 290px;
+    flex: 0 0 auto;
+    height: 100%;
+}
+
+.maxthumb {
+    display: flex;
+    max-height: 150px; // TODO: fix.
+    max-width: 230px;
+    width: auto;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+
+.img-fluid {
+  max-width:  100%;
+  max-height: 100%;
+}
+
+.card-footer {
+    border: 0;
+}
+
+.card .thumbnail {
+    background-size: cover;
+    height: 100%;
+    display: block;
+    background-position: 38% 22% !important;
+    background-origin: border-box !important;
+    border-top-left-radius: .25rem;
+    border-bottom-left-radius: .25rem;
+}
+
+
+.card h2.card-title {
+  // font-family:Garamond, Georgia, serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    line-height: 1.25;
+    margin: 0px;
+}
+
+.card h2.card-title-small {
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.25;
+    margin: 0px;
+}
+
+.card h4.card-text {
+  // font-family:Garamond, Georgia, serif;
+    color: rgba(0, 0, 0, .44);
+    font-size: 0.95rem;
+    line-height: 1.4;
+    font-weight: 400;
+    padding-top: 5px;
+    margin: 0px;
+}
+
+
+.card-body {
+  padding: 10px 0 10px 0;
+}
+
+// gallery that scrapes the post
+
+.scrape-gallery {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+   grid-gap: 10px;
+   margin: 0px;
+}
+
+.gallery-thumbnail-div {
+    display: flex;
+    max-width: 200px;
+    max-height: 80px;
+    width: auto;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.gallery-thumbnail {
+  max-width:  100%;
+  max-height: 100%;
+}
+
+// robot build specific css
+
+// .build {
+//   display: grid;
+//   grid-template-columns: repeat(12, 1fr);
+//   grid-gap: 10px;
+//   margin: 0px;
+// }
+.opening-image {
+  display: flex;
+    max-height: 500px; // TODO: fix.
+    max-width: 500px;
+    width: auto;
+    overflow: hidden;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+
+}
+
+.img-post {
+  max-width:  100%;
+  max-height: 100%;
+}
+
+.build h1.build-title {
+  font-weight: 300;
+}
+
+.build h2.build-title {
+  font-weight: 300;
+}
+
+.build h3.build-title {
+  font-weight: 400;
+  line-height: 0em;
+  padding: 0.5em 0 0;
+  margin: 0.5em 0 -0.3em;
+}
+
+.build h4.build-title {
+  font-weight: 400;
+  line-height: 0em;
+  padding: 0.5em 0 0;
+  margin: 0.5em 0 -0.3em;
+}
+
+
+// Mobile
+
+@media (max-width: 800px) {
+    .container {
+        max-width: $med-width;
+        transition: 0.3s ease all;
+    }
+    .card-group {
+        grid-column: span 4;
+    }
+    .maxthumb {
+        max-height: 120px;
+        overflow: hidden;
+    }
+    .scrape-gallery {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+       grid-gap: 10px;
+       margin: 0px;
+    }
+    .gallery-thumbnail-div {
+        max-width: 120px;
+        max-height: 80px;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 650px) {
+    .container {
+        max-width: 83%;
+    }
+    .navbar-ul {
+        margin-top: 5px;
+    }
+    .card-group {
+        grid-column: span 6;
+    }
+    .scrape-gallery {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+       grid-gap: 10px;
+       margin: 0px;
+    }
+    .gallery-thumbnail-div {
+        max-width: 120px;
+        max-height: 80px;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 500px) {
+	.navbar {
+		text-align: center;
+		padding: 50px 0px 0px 0px;
+	}
+  .card-group {
+      grid-column: span 12;
+  }
+  .scrape-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+     grid-gap: 10px;
+     margin: 0px;
+  }
+  .gallery-thumbnail-div {
+      max-width: 120px;
+      max-height: 70px;
+      overflow: hidden;
+  }
+	#site-title {
+		width: 100%;
+		float: none;
+	}
+  #site-subtitle {
+		width: 100%;
+		float: none;
+	}
+	#navlist {
+		padding: 0px 0 10px 0;
+		margin: 0;
+		display: block;
+		float: none;
+		text-align: center;
+		width: 100%;
+	}
+	#navlist li.alignable {
+		display: inline-block;
+	}
+	#navlist li.pull-left {
+		float: none;
+	}
+	#navlist li.navbar-list {
+		margin: 0;
+	}
+    #socials {
+		padding: 0px 0 10px 0;
+		margin: 0;
+		display: block;
+		float: none;
+		text-align: center;
+		width: 100%;
+	}
+	#socials li.alignable {
+		display: inline-block;
+	}
+	#socials li.pull-left {
+		float: none;
+	}
+	#socials li.navbar-list {
+		margin: 0;
+	}
+}
+// toc
+.toc {
+  line-height: 20px;
+  list-style-type: dot;
+  color: $inlinecodetext;
+}
+
+// Image
+.image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.caption {
+  text-align: center;
+  line-height: 20px;
+  font-family: 'Source Sans Pro', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 14px;
+}
+.row {
+  display: flex; /* equal height of the children */
+}
+.col {
+  flex: 1; /* additionally, equal width */
+
+  padding: 1em;
+}
+
+img[src*='#center'] {
+    display: block;
+    margin: auto;
+}
+
+#loudspeaker {
+    -webkit-filter: drop-shadow(0 0 1px rgba(58,57,57,0.25));
+    filter: drop-shadow(0 0 1px rgba(58,57,57,0.25));
+}
+
+#loudspeaker:hover {
+    -webkit-filter: drop-shadow(0 0 1px $accent);
+    filter: drop-shadow(0 0 1px $accent);
+}
+//
+
+//  typography
+
+.content {
+    line-height: 1.5;
+    ol {
+        counter-reset: list;
+    }
+    ol > li {
+        list-style-position: none;
+        position: relative;
+        list-style: none;
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    ul > li {
+        margin: 0px 0 0px 0;
+    }
+    ul {
+        padding: 0 20px 0 20px;;
+    }
+    ol {
+        padding: 0 30px 0 30px;
+    }
+    ol > li:before {
+        content: "[" counter(list, decimal) "] ";
+        counter-increment: list;
+        position: absolute;
+        left: -30px;
+    }
+    ol > li.publication-box {
+      box-shadow: 0px 0px 5px 1px #C0D5FA;
+    }
+
+    blockquote {
+        background-color: rgba(0,0,0,0.05);
+        margin: 20px 30px 20px 30px;
+        padding: 2px 30px 2px 30px;
+    }
+
+
+    .profile-picture {
+        // max-height: 100;
+        max-width: $image-size;
+        position: relative;
+        margin: 10px 0 0 15px;
+        float: right;
+        border-radius: 5%;
+        p & {
+            padding: 0;
+            margin: 0;
+        }
+        @media (max-width: $small-width) {
+            img {
+                margin-top: -5px;
+            }
+        }
+    }
+
+
+    .footnotes {
+
+      ol > li:before {
+          content: counter(list, decimal)".";
+          font-size: small;
+          vertical-align: super;
+          margin: 0;
+          padding: 0;
+          left: -1em
+      }
+      ol {
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+          font-size: small;
+      }
+
+    }
+
+    img {
+        text-align: center;
+    }
+}
+
+
+table {
+    margin: 15px 0;
+    border-collapse: collapse;
+    width: 100%;
+    padding: 0;
+}
+table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+table tr:nth-child(2n) {
+    // background-color: #f8f8f8;
+}
+table tr th {
+    font-weight: bold;
+    border: 1px solid #cccccc;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr td {
+    border: 1px solid #cccccc;
+    text-align: left;
+    margin: 0;
+    padding: 6px 13px;
+}
+table tr th :first-child, table tr td :first-child {
+    margin: 0;
+}
+table tr th :last-child, table tr td :last-child {
+    margin: 0;
+}
+
+table.component-list td, table.component-list tr, table.component-list th, table.component-list tbody {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+
+
+================================================
+File: js/gif-display.js
+================================================
+// function handling for gifs: hover display on the side for desktop, click to display sequentially for mobile
+
+var giflinks = document.getElementsByClassName("gif-link");
+var i;
+
+for (i = 0; i < giflinks.length; i++) {
+ giflinks[i].addEventListener("click", function() {
+   this.classList.toggle("active");
+   // only do collapsible content if the page is narrower than 1300px
+   if ($(window).width() < 1300) {
+     var content = document.getElementById(this.id+"-gif")
+     if (content.style.display === "block") {
+       content.style.display = "none";
+       content.style.textAlign.default = "true";
+       content.style.marginLeft.default = "true";
+       content.style.marginRight.default= "true";
+       content.style.position.default = "true";
+       content.style.marginTop.default = "true";
+       content.style.marginBottom.default = "true";
+     } else {
+       content.style.display = "block";
+       content.style.marginTop = "10px";
+       content.style.marginBottom = "10px";
+       content.style.textAlign = "center";
+       content.style.position = "static";
+     }
+   }
+ });
+
+// for page wider than 1300px do mouseover on the side
+ giflinks[i].addEventListener("mouseover", function() {
+   if ($(window).width() > 1300) {
+     var content = document.getElementById(this.id+"-gif")
+     content.style.display = "block";
+     content.style.position = "absolute";
+     content.style.right = "110%";
+     content.style.bottom = "-2em";
+
+   }
+ });
+
+ giflinks[i].addEventListener("mouseout", function() {
+   if ($(window).width() > 1300) {
+     var content = document.getElementById(this.id+"-gif")
+     content.style.display = "none";
+     content.style.position.default = "true";
+     content.style.right.default = "true";
+     content.style.bottom.default = "true";
+   }
+ });
+}
+
+
+
+================================================
+File: js/site.js
+================================================
+// Call this function first
+(function () {
+  handleLinks()
+})()
+
+function handleLinks () {
+  // Don't open our own site's links in new tabs
+  var host = location.hostname
+  // Grab and loop over all <a> elements
+  var allLinks = document.querySelectorAll('a')
+  for (var i = 0; i < allLinks.length; ++i) {
+    // if links are external and not empty
+    if (allLinks[i].hostname !== host && allLinks[i].hostname !== '') {
+      allLinks[i].target = '_blank'
+    }
+
+    if (allLinks[i].text == 'bibtex') {
+      allLinks[i].target = '_blank'
+    }
+  }
+}
+
+
+
+
+================================================
+File: .github/workflows/jekyll-docker.yml
+================================================
+name: Jekyll site CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Build the site in the jekyll/builder container
+      run: |
+        docker run \
+        -v ${{ github.workspace }}:/srv/jekyll -v ${{ github.workspace }}/_site:/srv/jekyll/_site \
+        jekyll/builder:latest /bin/bash -c "chmod -R 777 /srv/jekyll && jekyll build --future --incremental --trace"
+
+
