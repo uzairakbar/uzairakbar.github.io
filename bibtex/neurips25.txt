@@ -1,0 +1,6 @@
+@inproceedings{akbar2025analysis,
+  title     = {An Analysis of Causal Effect Estimation using Outcome Invariant Data Augmentation},
+  author    = {Uzair Akbar and Niki Kilbertus and Hao Shen and Krikamol Muandet and Bo Dai},
+  booktitle = {Advances in Neural Information Processing Systems 38 (NeurIPS 2025)},
+  year      = {2025}
+}
