@@ -2,7 +2,7 @@
 katex: True
 layout: post
 category: notes
-title: Orthogonal Linear Representation
+title: Orthogonal linear representation
 snippet: EVD, SVD and their application in PCA, LDA and ICA
 tags: [data science]
 ---

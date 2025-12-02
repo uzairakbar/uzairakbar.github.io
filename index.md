@@ -12,7 +12,8 @@ I dump my study notes here because I have a habit of losing physical copies.
 **U. Akbar**, N. Kilbertus, H. Shen, K. Muandet, B. Dai,
 *Advances in Neural Information Processing Systems (NeurIPS)*, 2025 **(Spotlight, top ~3%)**  
 \[[bibtex](bibtex/neurips25.txt)\]
-\[[pdf](https://neurips.cc/virtual/2025/poster/119327)\]
+\[[pdf](https://arxiv.org/pdf/2510.25128)\]
+\[[webpage](https://uzairakbar.com/causal-data-augmentation/)\]
 
 3.  [**Adversarial Appearance Learning in Augmented Cityscapes for Pedestrian Recognition in Autonomous Driving**](https://ieeexplore.ieee.org/abstract/document/9197024)  
 A. Savkin, T. Lapotre, K. Strauss, **U. Akbar**, F. Tombari,
