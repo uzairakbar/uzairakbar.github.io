@@ -24,6 +24,7 @@ navbar:
    link: "/"
  - name: "cv"
    link: "/uzair_cv.pdf"
+   new_tab: true
  - name: "notes"
    link: "/notes"
 

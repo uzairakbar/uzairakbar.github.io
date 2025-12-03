@@ -149,3 +149,17 @@
   [data-theme="dark"] .post-title {
       color: var(--accent-color) !important;
   }
+
+  /* Force the footer name to match the text color (White in dark mode, Black in light) */
+  .footer-name {
+      color: var(--text-color) !important;
+  }
+
+  /* Fix for mobile emoji rendering of Sun/Moon icons */
+  .theme-toggle span {
+      color: transparent;  /* Hide the native emoji color */
+      text-shadow: 0 0 0 white; /* Create a flat white silhouette */
+      
+      /* Optional: Ensure specific font rendering if needed */
+      font-variant-emoji: text; 
+  }
