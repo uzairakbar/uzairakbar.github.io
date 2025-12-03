@@ -1,6 +1,6 @@
 <!-- <div class="fixed-topbar"> -->
 <div class="navbar container">
-      <a id="site-title" class="alignable pull-left" href="{{ site.url }}">{{ site.title }}</a>
+      <a id="site-title" class="alignable pull-left" href="{{ site.baseurl }}/">{{ site.title }}</a>
       <br/>
       <p id="site-subtitle" class="alignable pull-left" >{{ site.subtitle }}</p>
     <ul id="navlist" class="alignable pull-right navbar-ul">
@@ -9,7 +9,7 @@
           {% if x.name == "github" %}
               <a href="{{ x.link }}">{{ x.name }}</a>
           {% else %}
-              <a href="{{ x.link }}">{{ x.name }}</a>
+              <a href="{{ x.link }}" {% if x.new_tab %}target="_blank" rel="noopener noreferrer"{% endif %}>{{ x.name }}
           {% endif %}
           {% if forloop.last == false %} {% endif %}
         </li>
