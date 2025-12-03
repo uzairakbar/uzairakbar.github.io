@@ -144,3 +144,8 @@
   [data-theme="dark"] .theme-toggle .moon {
     display: none;
   }
+
+  /* Add this to the bottom of css/dark-mode.css */
+  [data-theme="dark"] .post-title {
+      color: var(--accent-color) !important;
+  }
