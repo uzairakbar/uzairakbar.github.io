@@ -635,8 +635,9 @@ height : 100%;
 		float: none;
 	}
 	#navlist li.navbar-list {
-		margin: 0;
-	}
+        margin: 0 10px; /* Adds 10px spacing on left and right */
+        display: inline-block; /* Ensure they sit side-by-side */
+    }
     #socials {
 		padding: 0px 0 10px 0;
 		margin: 0;
