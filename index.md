@@ -35,7 +35,13 @@ O. W. Bhatti, H. Suhail, **U. Akbar**, S. A. Hassan, H. Pervaiz, L. Musavian, Q.
 
 ### Other projects
 
-1. LIDAR based obstacle avoidance using reinforcment learning
+1. DeepRacer Gym; A Gymnasium wrapper for the AWS DeepRacer simulator
+\[[code](https://github.com/uzairakbar/deepracer)\]
+\[[docs](https://uzairakbar.com/deepracer)\]
+[<a class="gif-link" id="deepracer">gif</a>]
+<img class="gif" id="deepracer-gif" src="assets/gifs/deepracer.gif"/>
+
+2. LIDAR based obstacle avoidance using reinforcment learning
 \[[code](https://github.com/uzairakbar/rl-obstacle-avoidance)\]
 [<a class="gif-link" id="rl-obstacle-avoidance-sim">sim</a>/<a class="gif-link" id="rl-obstacle-avoidance-real">real</a> gifs]
 <img class="gif" id="rl-obstacle-avoidance-sim-gif" src="assets/gifs/rl-obstacle-avoidance-sim.gif"/>
