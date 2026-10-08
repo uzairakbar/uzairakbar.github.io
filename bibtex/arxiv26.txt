@@ -1,0 +1,9 @@
+@misc{akbar2026symmetry,
+  title         = {Symmetry-Informed Causal Partial Identification},
+  author        = {Uzair Akbar and Zulfiqar Zaidi and Niki Kilbertus and Krikamol Muandet and Bo Dai},
+  year          = {2026},
+  eprint        = {2610.09230},
+  archivePrefix = {arXiv},
+  primaryClass  = {cs.LG},
+  url           = {https://arxiv.org/abs/2610.09230}
+}

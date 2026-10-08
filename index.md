@@ -8,7 +8,13 @@ I dump my study notes here because I have a habit of losing physical copies.
 
 ### Publications
 
-1.  [**An Analysis of Causal Effect Estimation using Outcome Invariant Data Augmentation**](https://neurips.cc/virtual/2025/poster/119327)  
+1.  [**Symmetry-Informed Causal Partial Identification**](https://arxiv.org/abs/2610.09230)  
+**U. Akbar**, Z. Zaidi, N. Kilbertus, K. Muandet, B. Dai,
+*arXiv preprint*, 2026  
+\[[bibtex](bibtex/arxiv26.txt)\]
+\[[pdf](https://arxiv.org/pdf/2610.09230)\]
+
+2.  [**An Analysis of Causal Effect Estimation using Outcome Invariant Data Augmentation**](https://neurips.cc/virtual/2025/poster/119327)  
 **U. Akbar**, N. Kilbertus, H. Shen, K. Muandet, B. Dai,
 *Advances in Neural Information Processing Systems (NeurIPS)*, 2025 **(Spotlight, top ~3%)**  
 \[[bibtex](bibtex/neurips25.txt)\]
