@@ -1,6 +1,8 @@
-@inproceedings{akbar2025analysis,
-  title     = {An Analysis of Causal Effect Estimation using Outcome Invariant Data Augmentation},
-  author    = {Uzair Akbar and Niki Kilbertus and Hao Shen and Krikamol Muandet and Bo Dai},
-  booktitle = {Advances in Neural Information Processing Systems 38 (NeurIPS 2025)},
-  year      = {2025}
+@inproceedings{akbar2025symmetryAsIntervention,
+ author = {Akbar, Uzair and Kilbertus, Niki and Shen, Hao and Muandet, Krikamol and Dai, Bo},
+ booktitle = {Advances in Neural Information Processing Systems},
+ doi = {10.52202/085713-3290},
+ title = {An Analysis of Causal Effect Estimation using Outcome Invariant Data Augmentation},
+ volume = {38},
+ year = {2025}
 }
