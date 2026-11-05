@@ -124,7 +124,7 @@ delete[] buffer;    // de-allocate
 ```cpp
 
 void Increment(int* number){
-    (*number)++;    // incrementing takes precedence by default
+    (*number)++;    // parentheses needed, ++ binds tighter than *
 }
 
 int main(){
@@ -144,7 +144,7 @@ int& my_ref = my_var;
 
 ```cpp
 void Increment(int& number){
-    number++;    // incrementing takes precedence by default
+    number++;       // no dereferencing needed with references
 }
 
 int main(){
