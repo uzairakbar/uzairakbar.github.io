@@ -29,16 +29,16 @@ published: false
 
 The `make` command helps with building (i.e. compiling and linking) multiple files, e.g.
 
-```bash
-CFLAG = -Wno-implicit-function-declaration
+```makefile
+CFLAGS = -Wno-implicit-function-declaration
 
 all: main.cpp func.cpp
-    @echo "Compiling+linking files."
-    g++ ${CFLAGS} main.cpp func.cpp -o output
-    @chmod +x output
+	@echo "Compiling+linking files."
+	g++ ${CFLAGS} main.cpp func.cpp -o output
+	@chmod +x output
 
 clean:
-    rm output
+	rm output
 ```
 
 Use `make all` followed by `./output` to execute the program.
@@ -85,8 +85,8 @@ int main () {
 ```cpp
 int my_var = 8;
 int* my_ptr = &my_var;
-std::cout << printf(my_ptr);    // prints 0xMMMMMMMM
-std::cout << printf(*my_ptr);   // prints 8
+std::cout << my_ptr;            // prints 0xMMMMMMMM
+std::cout << *my_ptr;           // prints 8
 ```
 
 alternatively,
@@ -95,8 +95,8 @@ alternatively,
 int my_var = 8;
 int* my_ptr = nullptr;          // similar to 0 or NULL
 my_ptr = &my_var;
-std::cout << printf(my_ptr);    // prints 0xMMMMMMMM
-std::cout << printf(*my_ptr);   // prints 8
+std::cout << my_ptr;            // prints 0xMMMMMMMM
+std::cout << *my_ptr;           // prints 8
 ```
 
 ### Type casting for pointers
@@ -114,7 +114,7 @@ memset(
     buffer,         // the pointer
     0,              // the value to be assigned/set
     8               // how many bytes
-)
+);
 // do whatever with buffer...
 delete[] buffer;    // de-allocate
 ```

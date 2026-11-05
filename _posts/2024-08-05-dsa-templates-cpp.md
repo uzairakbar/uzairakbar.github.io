@@ -16,7 +16,10 @@ published: false
 
 ```c++
 #include <iostream>
+#include <string>
 #include <unordered_map>
+
+using namespace std;
 
 int main(void){
     unordered_map<string, string> hash_table;
@@ -26,7 +29,7 @@ int main(void){
     hash_table["key3"] = "value3";
 
     for (auto item: hash_table){
-        cout << item.first << " " item.second << endl;
+        cout << item.first << " " << item.second << endl;
     }
     if (hash_table.find("something") != hash_table.end()){
         cout << "found it!";
@@ -199,7 +202,7 @@ def binarySearch(number: int, arr: List[int]) -> int:
         else:
             return mid
         
-    return (left + right)/2.0
+    return -1                               # not found
 ```
 
 
@@ -221,6 +224,7 @@ def numIslands(self, grid: List[List[str]]) -> int:
         def exploreIsland(x, y):
             queue = deque()
             queue.append( (x, y) )
+            visited.add( (x, y) )
             while queue:                            # until visited all
                 # x, y = queue.pop()                # use for DFS
                 x, y = queue.popleft()
@@ -231,7 +235,7 @@ def numIslands(self, grid: List[List[str]]) -> int:
                     (0, -1),
                     (-1, 0)
                 ])
-                neighbors = [(y + dy, x + dx) for dy, dx in STEPS]
+                neighbors = [(x + dx, y + dy) for dx, dy in STEPS]
                 for xn, yn in neighbors:
                     if (0 <= xn < M and             # x_ in range
                         0 <= yn < N and             # y_ in range
@@ -239,8 +243,7 @@ def numIslands(self, grid: List[List[str]]) -> int:
                         (xn, yn) not in visited):   # not visited
 
                         queue.append( (xn, yn) )    # make sure to visit
-                        
-                visited.add( (x, y) )
+                        visited.add( (xn, yn) )     # mark when queued
             
             return
         
@@ -274,6 +277,16 @@ def mergeSort(arr: List[int]) -> List[int]:
     else:
         left_sorted = mergeSort(arr[:n//2])     # sort left
         right_sorted = mergeSort(arr[n//2:])    # sort right
-        all_sorted = left_sorted+right_sorted   # merge
+
+        all_sorted = []                         # merge
+        i, j = 0, 0
+        while i < len(left_sorted) and j < len(right_sorted):
+            if left_sorted[i] <= right_sorted[j]:
+                all_sorted.append(left_sorted[i])
+                i += 1
+            else:
+                all_sorted.append(right_sorted[j])
+                j += 1
+        all_sorted += left_sorted[i:] + right_sorted[j:]
         return all_sorted
 ```
