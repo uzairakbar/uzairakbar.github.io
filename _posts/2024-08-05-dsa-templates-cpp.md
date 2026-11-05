@@ -1,7 +1,7 @@
 ---
 layout: post
 category: notes
-title: Baisc data structures & algorithms in C++
+title: Basic data structures & algorithms in C++
 snippet: C++ snippets for popular data structures and algorithms.
 tags: [data structures, algorithms, leetcode]
 published: false
@@ -73,12 +73,12 @@ class Stack:
         return n
 ```
 
-Note, this implementation uses `list`, which is a python implementation of a dynamic array. Using a linkedin-list based `deque` would be (slightly) better for memory (`O(2*N)` worst-case vs. `O(N)`) and time (`O(1)` amortized vs. `O(1)`).
+Note, this implementation uses `list`, which is a python implementation of a dynamic array. Using a linked-list based `deque` would be (slightly) better for memory (`O(2*N)` worst-case vs. `O(N)`) and time (`O(1)` amortized vs. `O(1)`).
 
 ```python
 from collections import deque
 
-stack = deque(some_list)    # initializaiton, also accepts maxlen parameter
+stack = deque(some_list)    # initialization, also accepts maxlen parameter
 val = stack.pop()           # pop val from RIGHT
 stack.extend([val])         # append val to RIGHT
 stack.append(val)           # equivalent to above
@@ -90,7 +90,7 @@ stack.append(val)           # equivalent to above
 ```python
 from collections import deque
 
-queue = deque(some_list)    # initializaiton, also accepts maxlen parameter
+queue = deque(some_list)    # initialization, also accepts maxlen parameter
 val = queue.popleft()       # pop val from LEFT
 queue.extend([val])         # append val to RIGHT
 queue.append(val)           # equivalent to above
@@ -255,7 +255,7 @@ def numIslands(self, grid: List[List[str]]) -> int:
         return islands
 ```
 
-#### Deapth First Search
+#### Depth First Search
 Use `stack` instead of `queue` (i.e. use `x, y = queue.pop()` instead of `x, y = queue.popleft()`) in BFS.
 
 ### Sorting

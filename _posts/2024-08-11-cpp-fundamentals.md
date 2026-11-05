@@ -27,7 +27,7 @@ published: false
 
 ### Make
 
-The `make` command help with building (i.e. compiling and linking) multiple files, e.g.
+The `make` command helps with building (i.e. compiling and linking) multiple files, e.g.
 
 ```bash
 CFLAG = -Wno-implicit-function-declaration
@@ -124,7 +124,7 @@ delete[] buffer;    // de-allocate
 ```cpp
 
 void Increment(int* number){
-    (*number)++;    // incrementing takes precidence by default
+    (*number)++;    // incrementing takes precedence by default
 }
 
 int main(){
@@ -144,7 +144,7 @@ int& my_ref = my_var;
 
 ```cpp
 void Increment(int& number){
-    number++;    // incrementing takes precidence by default
+    number++;    // incrementing takes precedence by default
 }
 
 int main(){

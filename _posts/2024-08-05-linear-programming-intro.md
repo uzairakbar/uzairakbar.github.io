@@ -3,7 +3,7 @@ katex: True
 layout: post
 category: notes
 title: Introduction to linear programming
-snippet: An introduction to linear programs and intiger linear programs.
+snippet: An introduction to linear programs and integer linear programs.
 tags: [data science]
 published: false
 ---

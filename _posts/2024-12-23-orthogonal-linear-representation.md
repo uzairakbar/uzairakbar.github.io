@@ -36,14 +36,14 @@ in Sections [4](#pca) and [5](#lda) that correspond to *orthogonal linear repres
 
 In the context of *orthogonal linear representations*, we might also be
 interested in a representation that separates out a mixture of signals
-into its 'independent' components. We discuss this Section [6](#ica).
+into its 'independent' components. We discuss this in Section [6](#ica).
 
 # Eigen Value Decomposition (EVD) {#evd}
 
 For any square matrix $$\mathbf{X}\in\mathbb{R}^{n\times n}$$, we have $$n$$
 "eigenvalues" $$\lambda_i\in\mathbb{R}$$ and corresponding "eigenvectors"
 $$\mathbf{u}_i\in\mathbb{R}^{n}$$. Eigenvalues and eigenvectors are
-special in the sense that for eah pair the following equation holds
+special in the sense that for each pair the following equation holds
 
 <div id="eq:evd1">
 $$
@@ -241,8 +241,8 @@ along the direction of highest variance. The second principal component
 lies along the direction of second highest variance, and so on. The
 score vectors $$\mathbf{z}_i$$ are then the "projections"[^3]
 $$\widehat{\bar{\mathbf{x}}}_i$$ of the original (centered) samples
-$$\bar{\mathbf{x}}_i$$ onto a linear-subsapce with unit-vectors
-$${\mathbf{u}}_j$$, but viewed in the sup-sapce instead of the original
+$$\bar{\mathbf{x}}_i$$ onto a linear-subspace with unit-vectors
+$${\mathbf{u}}_j$$, but viewed in the sub-space instead of the original
 space.
 
 # Linear Discriminant Analysis (LDA) {#lda}
