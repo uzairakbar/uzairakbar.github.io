@@ -21,7 +21,7 @@ items = [
 ]
 
 [[groups]]
-title = "Services"
+title = "Service"
 items = [
   "Reviewer, [NeurIPS 2026](https://neurips.cc/Conferences/2026)",
   "Reviewer, [UniReps @ NeurIPS 2026](https://unireps.org/2026/)",
