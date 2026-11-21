@@ -1,30 +1,31 @@
-# Parchment
-A clean, single column blog template built for jekyll
+# uzairakbar.com
 
-## Usage
+My homepage and study notes, built with [Zola](https://www.getzola.org) and
+the [Camera Ready](https://github.com/uzairakbar/camera-ready) theme.
 
-* To use this as your GitHub Page, fork this repository, and
-  rename it to `<username>.github.io`. Your site will be live
-  at `https://<username>.github.io/parchment-jekyll`.
+| To change | Edit |
+|---|---|
+| Bio | `content/_index.md` |
+| News | `data/news.toml` |
+| Publications | `data/publications.bib` |
+| Co-author links | `data/authors.toml` |
+| Software cards | `data/projects.toml` |
+| Experience, teaching, services | `data/misc.toml` |
+| Notes | `content/notes/` |
+| Name, menu, links, options | `zola.toml` |
 
-* You can customise variables in `_config.yml` and `css/*` files.
+`drafts/` holds unpublished notes from the old Jekyll site, in their original
+format. They are not built.
 
-* You can add markdown files, say `foo.md` in the root directory
-  of the repository. It will then be accessible like
-  `your.website.com/foo`.
+## Preview
 
-* To add posts, add your posts in the `_posts` directory. Follow
-  the naming convention `%yyyy-%mm-%dd-your-title-here.md`.
+```sh
+git submodule update --init
+zola serve
+```
 
-* To add a profile picture, use class `profile-picture` around
-  the image.
+## Deploy
 
-## Contributing
-Pull requests are welcome. For major changes, please open an
-issue first to discuss what you would like to change.
+Pushing to `main` builds and publishes the site through GitHub Actions.
 
-## Credits
-This theme is inspired from [Xuning Yang's variation](https://github.com/xuningy/xuningy.github.io) of [Parchment](https://rahul-bothra.github.io/parchment/).
-
-## License
-[GNU GPL v3](LICENSE)
+To update the theme: `git submodule update --remote themes/camera-ready`.

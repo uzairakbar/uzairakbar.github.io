@@ -1,10 +1,15 @@
----
-layout: post
-category: notes
-title: The one sick child
-snippet: A thought experiment in anti-natalism.
-tags: [philosophy]
----
++++
+title = "The one sick child"
+date = 2023-08-04
+aliases = ["notes/2023-08-04-sick-child"]
+description = "A thought experiment in anti-natalism."
+
+[taxonomies]
+tags = ["philosophy"]
+
+[extra]
+toc = false
++++
 
 It would have been unimaginable in the past that people would already be able to tell the gender of their children while still being in pregnancy. In a similar sense let us imagine for a moment a future where your family physician would be able to analyze your complete genetic makeup and tell you with absolute certainty whether the child(ren) you are about to conceive (before the egg has even been fertilized) would suffer from some terrible affliction or not (e.g. Hallopeau–Siemens syndrome). In this fictional world of ours, the doctor can also tell you the number of children you will conceive (twins, triplets, etc.).
 

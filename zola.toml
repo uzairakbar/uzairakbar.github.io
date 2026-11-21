@@ -1,0 +1,50 @@
+# uzairakbar.com, built with Zola and the Camera Ready theme (themes/camera-ready).
+base_url = "https://uzairakbar.com"
+title = "Uzair Akbar"
+description = "A place to dump my study notes."
+default_language = "en"
+theme = "camera-ready"
+author = "Uzair Akbar"
+generate_feeds = true
+
+taxonomies = [{ name = "tags" }]
+
+[markdown]
+smart_punctuation = true
+definition_list = true
+bottom_footnotes = false
+
+[markdown.highlighting]
+style = "class"
+light_theme = "camera-ready-light"
+dark_theme = "camera-ready-dark"
+extra_themes = ["themes/camera-ready/syntax/camera-ready-light.json", "themes/camera-ready/syntax/camera-ready-dark.json"]
+
+[link_checker]
+internal_level = "error"
+external_level = "warn"
+
+[extra]
+favicon = "assets/icons/favicon/favicon32.png"
+menu = [
+  { name = "notes", url = "@/notes/_index.md" },
+  { name = "cv", url = "uzair_cv.pdf" },
+]
+links = [
+  { name = "GitHub", url = "https://github.com/uzairakbar", icon = "github" },
+  { name = "Scholar", url = "https://scholar.google.de/citations?user=fh3DqPAAAAAJ&hl", icon = "scholar" },
+  { name = "LinkedIn", url = "https://www.linkedin.com/in/uzair25/", icon = "linkedin" },
+  { name = "Twitter", url = "https://x.com/uzairakbar25", icon = "twitter" },
+  { name = "YouTube", url = "https://www.youtube.com/@CalisthenicsLog", icon = "youtube" },
+]
+photo = "img/profile.png"
+photo_on_phones = false
+author_names = ["Uzair Akbar", "U. Akbar"]
+home_sections = ["news", "selected", "projects", "misc"]
+headings = { projects = "Software" }
+author_initials = true
+search = true
+search_shortcut = true
+search_site = "uzairakbar.com"
+scheme_toggle = true
+show_author = false

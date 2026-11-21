@@ -1,0 +1,92 @@
+# Build the site, check its links, and publish it to GitHub Pages.
+#
+# To use this for your own site, copy this file to the same path in your
+# repository and, under Settings > Pages, set "Source" to "GitHub Actions".
+# Nothing else needs editing.
+name: Build and deploy
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+  # Rebuild every Monday so the "New!" badges on old news expire by themselves.
+  schedule:
+    - cron: "0 5 * * 1"
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+env:
+  # The Zola version this site is built with. Raise it deliberately.
+  ZOLA_VERSION: "0.23.6"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          submodules: recursive
+
+      - name: Install Zola
+        run: |
+          curl -sSfL "https://github.com/getzola/zola/releases/download/v${ZOLA_VERSION}/zola-v${ZOLA_VERSION}-x86_64-unknown-linux-gnu.tar.gz" \
+            | tar -xz -C /usr/local/bin zola
+          zola --version
+
+      - name: Check links
+        run: zola check
+
+      - id: pages
+        if: github.event_name != 'pull_request'
+        uses: actions/configure-pages@v5
+
+      - name: Build
+        run: |
+          if [ -n "${{ steps.pages.outputs.base_url }}" ]; then
+            zola build --base-url "${{ steps.pages.outputs.base_url }}"
+          else
+            zola build
+          fi
+
+      # Optional. Renders the maths now so that visitors need no JavaScript.
+      # Uses the Node.js already on the runner and the KaTeX inside the theme;
+      # there is nothing to install. Delete this step and maths is rendered in
+      # the browser instead.
+      - name: Render maths
+        run: |
+          script=themes/camera-ready/scripts/prerender-math.js
+          [ -f "$script" ] || script=scripts/prerender-math.js
+          node "$script" public
+
+      - name: No requests to other sites
+        run: |
+          if grep -rEho '<(script|link|img)[^>]+(src|href)="https?://[^"]+"' public --include='*.html' \
+              | grep -E 'rel="stylesheet"|<script|<img' \
+              | grep -v "$(grep -m1 -o 'https\?://[^/"]*' public/index.html | head -1)"; then
+            echo "The built site loads something from another domain." >&2
+            exit 1
+          fi
+
+      - if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: public
+
+  deploy:
+    if: github.event_name != 'pull_request'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

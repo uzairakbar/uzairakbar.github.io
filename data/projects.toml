@@ -1,0 +1,21 @@
+[[projects]]
+name = "DeepRacer Gym"
+url = "https://uzairakbar.com/deepracer"
+thumbnail = "img/deepracer.gif"
+text = "A Gymnasium wrapper for the AWS DeepRacer simulator."
+links = [
+  { name = "code", url = "https://github.com/uzairakbar/deepracer" },
+  { name = "docs", url = "https://uzairakbar.com/deepracer" },
+]
+
+[[projects]]
+name = "LIDAR based obstacle avoidance using reinforcement learning"
+url = "https://github.com/uzairakbar/rl-obstacle-avoidance"
+thumbnail = "img/rl-obstacle-avoidance-sim.gif"
+thumbnail_hover = "img/rl-obstacle-avoidance-real.gif"
+dark_invert = true
+links = [
+  { name = "code", url = "https://github.com/uzairakbar/rl-obstacle-avoidance" },
+  { name = "sim gif", url = "img/rl-obstacle-avoidance-sim.gif" },
+  { name = "real gif", url = "img/rl-obstacle-avoidance-real.gif" },
+]
