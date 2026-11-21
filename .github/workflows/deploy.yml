@@ -66,10 +66,12 @@ jobs:
           [ -f "$script" ] || script=scripts/prerender-math.js
           node "$script" public
 
+      # Google Analytics (templates/base.html) is the one allowed exception.
       - name: No requests to other sites
         run: |
           if grep -rEho '<(script|link|img)[^>]+(src|href)="https?://[^"]+"' public --include='*.html' \
               | grep -E 'rel="stylesheet"|<script|<img' \
+              | grep -v 'https://www.googletagmanager.com/' \
               | grep -v "$(grep -m1 -o 'https\?://[^/"]*' public/index.html | head -1)"; then
             echo "The built site loads something from another domain." >&2
             exit 1

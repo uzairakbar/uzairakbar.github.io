@@ -25,6 +25,8 @@ internal_level = "error"
 external_level = "warn"
 
 [extra]
+# Google Analytics measurement ID; remove the line to switch tracking off.
+google_analytics = "G-079E4ZLSG0"
 favicon = "assets/icons/favicon/favicon32.png"
 menu = [
   { name = "notes", url = "@/notes/_index.md" },
