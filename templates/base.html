@@ -1,0 +1,34 @@
+{#- This site's additions to the theme's page head. Everything else comes
+    from themes/camera-ready. -#}
+{% extends "camera-ready/templates/base.html" %}
+
+{% block head %}
+{%- set og_title = config.title %}
+{%- set og_desc = config.description %}
+{%- if page is defined and page.title %}{% set og_title = page.title %}{% if page.description %}{% set og_desc = page.description %}{% endif %}{% endif %}
+{%- if section is defined and section.title %}{% set og_title = section.title %}{% endif %}
+{%- set og_image = get_url(path="assets/icons/favicon/favicon120.png") %}
+  <meta name="author" content="{{ config.author }}">
+{%- if current_url is defined %}
+  <link rel="canonical" href="{{ current_url | safe }}">
+  <meta property="og:url" content="{{ current_url | safe }}">
+{%- endif %}
+  <meta property="og:title" content="{{ og_title }}">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="{{ og_image | safe }}">
+  <meta property="og:description" content="{{ og_desc }}">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="{{ og_title }}">
+  <meta name="twitter:description" content="{{ og_desc }}">
+  <meta name="twitter:image" content="{{ og_image | safe }}">
+{#- Google Analytics, as on the old site. Left out of local previews. -#}
+{%- if config.extra.google_analytics and config.mode == "build" %}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ config.extra.google_analytics }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', '{{ config.extra.google_analytics }}');
+  </script>
+{%- endif %}
+{% endblock head %}
