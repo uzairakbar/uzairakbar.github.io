@@ -10,7 +10,7 @@ the [Camera Ready](https://github.com/uzairakbar/camera-ready) theme.
 | Publications | `data/publications.bib` |
 | Co-author links | `data/authors.toml` |
 | Software cards | `data/projects.toml` |
-| Experience, teaching, services | `data/misc.toml` |
+| Experience, teaching, service | `data/misc.toml` |
 | Notes | `content/notes/` |
 | Name, menu, links, options | `zola.toml` |
 

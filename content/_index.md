@@ -4,4 +4,4 @@ title = "Uzair Akbar"
 aliases = ["papers"]
 +++
 
-I dump my study notes here because I have a habit of losing physical copies.
+I dump my study notes here because I have a habit of losing physical copies. Catch me at:

@@ -1,6 +1,6 @@
 [[news]]
 date = 2026-11-17
-text = "[Talk](https://youtu.be/EunK50HF0tU) at [ML Student Seminar](https://sites.google.com/view/ml-student-seminar/) @ GeorgiaTech."
+text = "[Talk](https://youtu.be/EunK50HF0tU) at [ML Student Seminar](https://sites.google.com/view/ml-student-seminar/) @ Georgia Tech."
 
 [[news]]
 date = 2026-10-06
@@ -12,7 +12,7 @@ text = "[Workshop paper](https://openreview.net/forum?id=eENswma7t9) accepted at
 
 [[news]]
 date = 2026-07-14
-text = "Released [DeepRacer Gym](https://uzairakbar.com/deepracer), a gymnasium wrapper for the [AWS DeepRacer](https://aws.amazon.com/deepracer/) simulator."
+text = "Released [DeepRacer Gym](https://uzairakbar.com/deepracer), a Gymnasium wrapper for the [AWS DeepRacer](https://aws.amazon.com/deepracer/) simulator."
 
 [[news]]
 date = 2025-12-12

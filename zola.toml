@@ -37,7 +37,7 @@ links = [
   { name = "Scholar", url = "https://scholar.google.de/citations?user=fh3DqPAAAAAJ&hl", icon = "scholar" },
   { name = "LinkedIn", url = "https://www.linkedin.com/in/uzair25/", icon = "linkedin" },
   { name = "Twitter", url = "https://x.com/uzairakbar25", icon = "twitter" },
-  { name = "YouTube", url = "https://www.youtube.com/@CalisthenicsLog", icon = "youtube" },
+  { name = "YouTube", url = "https://www.youtube.com/@CalisthenicsLog", icon = "youtube", bio = false },
 ]
 photo = "img/profile.png"
 photo_on_phones = false
