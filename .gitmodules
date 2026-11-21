@@ -1,0 +1,3 @@
+[submodule "themes/camera-ready"]
+	path = themes/camera-ready
+	url = https://github.com/uzairakbar/camera-ready

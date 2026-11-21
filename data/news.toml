@@ -1,0 +1,23 @@
+[[news]]
+date = 2026-11-17
+text = "[Talk](https://youtu.be/EunK50HF0tU) at [ML Student Seminar](https://sites.google.com/view/ml-student-seminar/) @ GeorgiaTech."
+
+[[news]]
+date = 2026-10-06
+text = "New preprint: [Symmetry-Informed Causal Partial Identification](https://arxiv.org/abs/2610.09230)."
+
+[[news]]
+date = 2026-08-21
+text = "[Workshop paper](https://openreview.net/forum?id=eENswma7t9) accepted at [Causality for Decision Making](https://sites.google.com/view/uai-workshop-2026/home) @ UAI 2026."
+
+[[news]]
+date = 2026-07-14
+text = "Released [DeepRacer Gym](https://uzairakbar.com/deepracer), a gymnasium wrapper for the [AWS DeepRacer](https://aws.amazon.com/deepracer/) simulator."
+
+[[news]]
+date = 2025-12-12
+text = "Completed my MSCS @ Georgia Tech!"
+
+[[news]]
+date = 2025-09-18
+text = "[Paper](https://uzairakbar.com/causal-data-augmentation/) accepted as spotlight @ NeurIPS 2025!"

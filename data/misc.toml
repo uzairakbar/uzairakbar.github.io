@@ -1,0 +1,30 @@
+
+[[groups]]
+title = "Experience"
+items = [
+  "ML Research w/ [B. Dai](https://bo-dai.github.io/) @ Georgia Tech.",
+  "Software Engineer Intern @ Hewlett Packard Enterprise.",
+  "Software Engineer @ OMMAX.",
+  "Data Scientist @ Auto1 Group.",
+  "ML Research Intern w/ [K. Muandet](https://www.krikamol.org/) @ Max Planck Institute.",
+  "Data Science Intern @ PwC.",
+  "ML Research Intern w/ [A. Savkin](https://scholar.google.com/citations?user=_yXe7u4AAAAJ&hl=en) @ BMW Group.",
+  "Data Science Intern @ Allianz.",
+]
+
+[[groups]]
+title = "Teaching"
+items = [
+  "[Reinforcement Learning CS7642](https://omscs.gatech.edu/cs-7642-reinforcement-learning) @ Georgia Tech",
+  "[Deep Reinforcement Learning CS8803](https://syllabus.gatech.edu/sites/default/files/2026-04/CS%208803%20DRL%20fall%202025%20syllabus.pdf) @ Georgia Tech",
+  "[Approx. Dynamic Programming EI7649](https://ce.cit.tum.de/ldv/lehre/approximate-dynamic-programming-and-reinforcement-learning) @ TU Munich",
+]
+
+[[groups]]
+title = "Services"
+items = [
+  "Reviewer, [NeurIPS 2026](https://neurips.cc/Conferences/2026)",
+  "Reviewer, [UniReps @ NeurIPS 2026](https://unireps.org/2026/)",
+  "Reviewer, [RoboLetics @ CoRL 2026](https://roboletics.github.io/corl2026/)",
+  "Reviewer, [RoboLetics @ ICRA 2025](https://2025.ieee-icra.org/event/workshop-on-athletic-robots-and-dynamic-motor-skills-roboletics-2-0/)",
+]

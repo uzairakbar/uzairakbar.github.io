@@ -1,16 +1,19 @@
----
-layout: post
-category: notes
-title: Basic data structures & algorithms in python
-snippet: Python snippets for popular data structures and algorithms.
-tags: [data structures, algorithms, leetcode]
----
-- TOC
-{:toc .toc}
----
-## Data Structures
++++
+title = "Basic data structures & algorithms in python"
+date = 2024-08-04
+aliases = ["notes/2024-08-04-dsa-templates"]
+description = "Python snippets for popular data structures and algorithms."
 
-### Linked List
+[taxonomies]
+tags = ["data structures", "algorithms", "leetcode"]
+
+[extra]
+toc = true
++++
+
+### Data Structures
+
+#### Linked List
 
 ```python
 class ListNode:
@@ -25,7 +28,7 @@ pre, cur, nxt = None, head, nextNode(head)
 ```
 
 
-### Stack
+#### Stack
 
 ```python
 class Stack:
@@ -60,7 +63,7 @@ stack.append(val)           # equivalent to above
 ```
 
 
-### Queue
+#### Queue
 
 ```python
 from collections import deque
@@ -72,7 +75,7 @@ queue.append(val)           # equivalent to above
 ```
 
 
-### Binary Tree
+#### Binary Tree
 
 ```python
 class TreeNode:
@@ -88,7 +91,7 @@ class TreeNode:
 ```
 
 
-### Heap
+#### Heap
 
 ```python
 # min-heap
@@ -100,7 +103,7 @@ val = -1 * heapq.heappop(arr)
 ```
 
 
-### Prefix Tree/ Trie
+#### Prefix Tree/ Trie
 
 ```python
 class TreeNode:
@@ -149,11 +152,11 @@ class Trie:
         return True
 ```
 
-## Algorithms
+### Algorithms
 
-### Array Search
+#### Array Search
 
-#### Binary Search
+##### Binary Search
 
 ```python
 def binarySearch(number: int, arr: List[int]) -> int:
@@ -178,9 +181,9 @@ def binarySearch(number: int, arr: List[int]) -> int:
 ```
 
 
-### Graph Search
+#### Graph Search
 
-#### Breadth First Search
+##### Breadth First Search
 Using the [number of islands problem](https://leetcode.com/problems/number-of-islands/description/) as an example.
 
 ```python
@@ -230,12 +233,12 @@ def numIslands(self, grid: List[List[str]]) -> int:
         return islands
 ```
 
-#### Depth First Search
+##### Depth First Search
 Use `stack` instead of `queue` (i.e. use `x, y = queue.pop()` instead of `x, y = queue.popleft()`) in BFS.
 
-### Sorting
+#### Sorting
 
-#### Merge Sort
+##### Merge Sort
 
 ```python
 def mergeSort(arr: List[int]) -> List[int]:
